@@ -1,0 +1,227 @@
+{
+  "suppliers": [
+    {"gstin": "29AABCS1234F1Z5", "pan": "AABCS1234F", "name": "Steel Corp India Pvt Ltd", "state": "Karnataka"},
+    {"gstin": "27AABCT5678G1Z3", "pan": "AABCT5678G", "name": "Tech Solutions Maharashtra", "state": "Maharashtra"},
+    {"gstin": "33AABCU9012H1Z1", "pan": "AABCU9012H", "name": "Tamil Auto Parts Ltd", "state": "Tamil Nadu"},
+    {"gstin": "07AABCV3456I1Z9", "pan": "AABCV3456I", "name": "Delhi Electronics Hub", "state": "Delhi"},
+    {"gstin": "24AABCW7890J1Z7", "pan": "AABCW7890J", "name": "Gujarat Textiles Pvt Ltd", "state": "Gujarat"},
+    {"gstin": "06AABCX1234K1Z5", "pan": "AABCX1234K", "name": "Haryana Chemicals Ltd", "state": "Haryana"},
+    {"gstin": "09AABCY5678L1Z3", "pan": "AABCY5678L", "name": "UP Pharma Industries", "state": "Uttar Pradesh"},
+    {"gstin": "32AABCZ9012M1Z1", "pan": "AABCZ9012M", "name": "Kerala Spice Traders", "state": "Kerala"},
+    {"gstin": "36AADCA3456N1Z9", "pan": "AADCA3456N", "name": "Telangana IT Services", "state": "Telangana"},
+    {"gstin": "19AADCB7890O1Z7", "pan": "AADCB7890O", "name": "Bengal Manufacturing Co", "state": "West Bengal"}
+  ],
+  "buyers": [
+    {"gstin": "29BUYER001KA1Z5", "pan": "BUYER001KA", "name": "Bangalore Retail Corp", "state": "Karnataka"},
+    {"gstin": "27BUYER002MH1Z3", "pan": "BUYER002MH", "name": "Mumbai Trading House", "state": "Maharashtra"},
+    {"gstin": "33BUYER003TN1Z1", "pan": "BUYER003TN", "name": "Chennai Distributors", "state": "Tamil Nadu"},
+    {"gstin": "07BUYER004DL1Z9", "pan": "BUYER004DL", "name": "Delhi Wholesale Market", "state": "Delhi"},
+    {"gstin": "24BUYER005GJ1Z7", "pan": "BUYER005GJ", "name": "Ahmedabad Import Export", "state": "Gujarat"}
+  ],
+  "gstr1_filings": [
+    {
+      "supplier": {"gstin": "29AABCS1234F1Z5", "pan": "AABCS1234F", "name": "Steel Corp India Pvt Ltd", "state": "Karnataka"},
+      "returns_info": {"id": "R001", "type": "GSTR1", "period": "042025", "status": "FILED", "filingDate": "2025-05-11", "gstin": "29AABCS1234F1Z5"},
+      "invoices": [
+        {"invoiceNo": "INV001", "date": "2025-04-05", "taxableValue": 100000.00, "cgst": 9000.00, "sgst": 9000.00, "igst": 0, "gstAmount": 18000.00, "supplierGstin": "29AABCS1234F1Z5", "buyerGstin": "29BUYER001KA1Z5", "hsn": "7208"},
+        {"invoiceNo": "INV002", "date": "2025-04-08", "taxableValue": 250000.00, "cgst": 0, "sgst": 0, "igst": 45000.00, "gstAmount": 45000.00, "supplierGstin": "29AABCS1234F1Z5", "buyerGstin": "27BUYER002MH1Z3", "hsn": "7210"},
+        {"invoiceNo": "INV003", "date": "2025-04-10", "taxableValue": 75000.00, "cgst": 6750.00, "sgst": 6750.00, "igst": 0, "gstAmount": 13500.00, "supplierGstin": "29AABCS1234F1Z5", "buyerGstin": "29BUYER001KA1Z5", "hsn": "7208"},
+        {"invoiceNo": "INV004", "date": "2025-04-15", "taxableValue": 180000.00, "cgst": 0, "sgst": 0, "igst": 32400.00, "gstAmount": 32400.00, "supplierGstin": "29AABCS1234F1Z5", "buyerGstin": "33BUYER003TN1Z1", "hsn": "7216"},
+        {"invoiceNo": "INV005", "date": "2025-04-20", "taxableValue": 50000.00, "cgst": 4500.00, "sgst": 4500.00, "igst": 0, "gstAmount": 9000.00, "supplierGstin": "29AABCS1234F1Z5", "buyerGstin": "29BUYER001KA1Z5", "hsn": "7208"}
+      ]
+    },
+    {
+      "supplier": {"gstin": "27AABCT5678G1Z3", "pan": "AABCT5678G", "name": "Tech Solutions Maharashtra", "state": "Maharashtra"},
+      "returns_info": {"id": "R002", "type": "GSTR1", "period": "042025", "status": "LATE", "filingDate": "2025-05-25", "gstin": "27AABCT5678G1Z3"},
+      "invoices": [
+        {"invoiceNo": "INV006", "date": "2025-04-03", "taxableValue": 500000.00, "cgst": 45000.00, "sgst": 45000.00, "igst": 0, "gstAmount": 90000.00, "supplierGstin": "27AABCT5678G1Z3", "buyerGstin": "27BUYER002MH1Z3", "hsn": "8471"},
+        {"invoiceNo": "INV007", "date": "2025-04-12", "taxableValue": 120000.00, "cgst": 0, "sgst": 0, "igst": 21600.00, "gstAmount": 21600.00, "supplierGstin": "27AABCT5678G1Z3", "buyerGstin": "07BUYER004DL1Z9", "hsn": "8473"},
+        {"invoiceNo": "INV008", "date": "2025-04-18", "taxableValue": 85000.00, "cgst": 7650.00, "sgst": 7650.00, "igst": 0, "gstAmount": 15300.00, "supplierGstin": "27AABCT5678G1Z3", "buyerGstin": "27BUYER002MH1Z3", "hsn": "8471"},
+        {"invoiceNo": "INV009", "date": "2025-04-22", "taxableValue": 340000.00, "cgst": 0, "sgst": 0, "igst": 61200.00, "gstAmount": 61200.00, "supplierGstin": "27AABCT5678G1Z3", "buyerGstin": "24BUYER005GJ1Z7", "hsn": "8517"},
+        {"invoiceNo": "INV010", "date": "2025-04-28", "taxableValue": 95000.00, "cgst": 8550.00, "sgst": 8550.00, "igst": 0, "gstAmount": 17100.00, "supplierGstin": "27AABCT5678G1Z3", "buyerGstin": "27BUYER002MH1Z3", "hsn": "8471"}
+      ]
+    },
+    {
+      "supplier": {"gstin": "33AABCU9012H1Z1", "pan": "AABCU9012H", "name": "Tamil Auto Parts Ltd", "state": "Tamil Nadu"},
+      "returns_info": {"id": "R003", "type": "GSTR1", "period": "042025", "status": "FILED", "filingDate": "2025-05-10", "gstin": "33AABCU9012H1Z1"},
+      "invoices": [
+        {"invoiceNo": "INV011", "date": "2025-04-02", "taxableValue": 200000.00, "cgst": 18000.00, "sgst": 18000.00, "igst": 0, "gstAmount": 36000.00, "supplierGstin": "33AABCU9012H1Z1", "buyerGstin": "33BUYER003TN1Z1", "hsn": "8708"},
+        {"invoiceNo": "INV012", "date": "2025-04-09", "taxableValue": 150000.00, "cgst": 0, "sgst": 0, "igst": 27000.00, "gstAmount": 27000.00, "supplierGstin": "33AABCU9012H1Z1", "buyerGstin": "29BUYER001KA1Z5", "hsn": "8708"},
+        {"invoiceNo": "INV013", "date": "2025-04-14", "taxableValue": 88000.00, "cgst": 7920.00, "sgst": 7920.00, "igst": 0, "gstAmount": 15840.00, "supplierGstin": "33AABCU9012H1Z1", "buyerGstin": "33BUYER003TN1Z1", "hsn": "8714"},
+        {"invoiceNo": "INV014", "date": "2025-04-19", "taxableValue": 320000.00, "cgst": 0, "sgst": 0, "igst": 57600.00, "gstAmount": 57600.00, "supplierGstin": "33AABCU9012H1Z1", "buyerGstin": "07BUYER004DL1Z9", "hsn": "8708"},
+        {"invoiceNo": "INV015", "date": "2025-04-25", "taxableValue": 45000.00, "cgst": 4050.00, "sgst": 4050.00, "igst": 0, "gstAmount": 8100.00, "supplierGstin": "33AABCU9012H1Z1", "buyerGstin": "33BUYER003TN1Z1", "hsn": "8714"}
+      ]
+    },
+    {
+      "supplier": {"gstin": "07AABCV3456I1Z9", "pan": "AABCV3456I", "name": "Delhi Electronics Hub", "state": "Delhi"},
+      "returns_info": {"id": "R004", "type": "GSTR1", "period": "042025", "status": "FILED", "filingDate": "2025-05-09", "gstin": "07AABCV3456I1Z9"},
+      "invoices": [
+        {"invoiceNo": "INV016", "date": "2025-04-04", "taxableValue": 420000.00, "cgst": 37800.00, "sgst": 37800.00, "igst": 0, "gstAmount": 75600.00, "supplierGstin": "07AABCV3456I1Z9", "buyerGstin": "07BUYER004DL1Z9", "hsn": "8528"},
+        {"invoiceNo": "INV017", "date": "2025-04-11", "taxableValue": 68000.00, "cgst": 0, "sgst": 0, "igst": 12240.00, "gstAmount": 12240.00, "supplierGstin": "07AABCV3456I1Z9", "buyerGstin": "29BUYER001KA1Z5", "hsn": "8528"},
+        {"invoiceNo": "INV018", "date": "2025-04-16", "taxableValue": 155000.00, "cgst": 0, "sgst": 0, "igst": 27900.00, "gstAmount": 27900.00, "supplierGstin": "07AABCV3456I1Z9", "buyerGstin": "27BUYER002MH1Z3", "hsn": "8541"},
+        {"invoiceNo": "INV019", "date": "2025-04-21", "taxableValue": 92000.00, "cgst": 8280.00, "sgst": 8280.00, "igst": 0, "gstAmount": 16560.00, "supplierGstin": "07AABCV3456I1Z9", "buyerGstin": "07BUYER004DL1Z9", "hsn": "8528"},
+        {"invoiceNo": "INV020", "date": "2025-04-27", "taxableValue": 210000.00, "cgst": 0, "sgst": 0, "igst": 37800.00, "gstAmount": 37800.00, "supplierGstin": "07AABCV3456I1Z9", "buyerGstin": "24BUYER005GJ1Z7", "hsn": "8541"}
+      ]
+    },
+    {
+      "supplier": {"gstin": "24AABCW7890J1Z7", "pan": "AABCW7890J", "name": "Gujarat Textiles Pvt Ltd", "state": "Gujarat"},
+      "returns_info": {"id": "R005", "type": "GSTR1", "period": "042025", "status": "FILED", "filingDate": "2025-05-08", "gstin": "24AABCW7890J1Z7"},
+      "invoices": [
+        {"invoiceNo": "INV021", "date": "2025-04-06", "taxableValue": 300000.00, "cgst": 0, "sgst": 0, "igst": 15000.00, "gstAmount": 15000.00, "supplierGstin": "24AABCW7890J1Z7", "buyerGstin": "27BUYER002MH1Z3", "hsn": "5208"},
+        {"invoiceNo": "INV022", "date": "2025-04-13", "taxableValue": 175000.00, "cgst": 8750.00, "sgst": 8750.00, "igst": 0, "gstAmount": 17500.00, "supplierGstin": "24AABCW7890J1Z7", "buyerGstin": "24BUYER005GJ1Z7", "hsn": "5209"},
+        {"invoiceNo": "INV023", "date": "2025-04-17", "taxableValue": 98000.00, "cgst": 0, "sgst": 0, "igst": 4900.00, "gstAmount": 4900.00, "supplierGstin": "24AABCW7890J1Z7", "buyerGstin": "33BUYER003TN1Z1", "hsn": "5208"},
+        {"invoiceNo": "INV024", "date": "2025-04-23", "taxableValue": 440000.00, "cgst": 0, "sgst": 0, "igst": 22000.00, "gstAmount": 22000.00, "supplierGstin": "24AABCW7890J1Z7", "buyerGstin": "07BUYER004DL1Z9", "hsn": "5210"},
+        {"invoiceNo": "INV025", "date": "2025-04-29", "taxableValue": 62000.00, "cgst": 3100.00, "sgst": 3100.00, "igst": 0, "gstAmount": 6200.00, "supplierGstin": "24AABCW7890J1Z7", "buyerGstin": "24BUYER005GJ1Z7", "hsn": "5209"}
+      ]
+    },
+    {
+      "supplier": {"gstin": "06AABCX1234K1Z5", "pan": "AABCX1234K", "name": "Haryana Chemicals Ltd", "state": "Haryana"},
+      "returns_info": {"id": "R006", "type": "GSTR1", "period": "042025", "status": "NOT_FILED", "filingDate": null, "gstin": "06AABCX1234K1Z5"},
+      "invoices": [
+        {"invoiceNo": "INV026", "date": "2025-04-07", "taxableValue": 560000.00, "cgst": 0, "sgst": 0, "igst": 100800.00, "gstAmount": 100800.00, "supplierGstin": "06AABCX1234K1Z5", "buyerGstin": "27BUYER002MH1Z3", "hsn": "2801"},
+        {"invoiceNo": "INV027", "date": "2025-04-14", "taxableValue": 230000.00, "cgst": 0, "sgst": 0, "igst": 41400.00, "gstAmount": 41400.00, "supplierGstin": "06AABCX1234K1Z5", "buyerGstin": "29BUYER001KA1Z5", "hsn": "2804"},
+        {"invoiceNo": "INV028", "date": "2025-04-20", "taxableValue": 125000.00, "cgst": 0, "sgst": 0, "igst": 22500.00, "gstAmount": 22500.00, "supplierGstin": "06AABCX1234K1Z5", "buyerGstin": "33BUYER003TN1Z1", "hsn": "2801"},
+        {"invoiceNo": "INV029", "date": "2025-04-25", "taxableValue": 78000.00, "cgst": 0, "sgst": 0, "igst": 14040.00, "gstAmount": 14040.00, "supplierGstin": "06AABCX1234K1Z5", "buyerGstin": "07BUYER004DL1Z9", "hsn": "2804"},
+        {"invoiceNo": "INV030", "date": "2025-04-30", "taxableValue": 195000.00, "cgst": 0, "sgst": 0, "igst": 35100.00, "gstAmount": 35100.00, "supplierGstin": "06AABCX1234K1Z5", "buyerGstin": "24BUYER005GJ1Z7", "hsn": "2801"}
+      ]
+    },
+    {
+      "supplier": {"gstin": "09AABCY5678L1Z3", "pan": "AABCY5678L", "name": "UP Pharma Industries", "state": "Uttar Pradesh"},
+      "returns_info": {"id": "R007", "type": "GSTR1", "period": "042025", "status": "FILED", "filingDate": "2025-05-10", "gstin": "09AABCY5678L1Z3"},
+      "invoices": [
+        {"invoiceNo": "INV031", "date": "2025-04-03", "taxableValue": 145000.00, "cgst": 0, "sgst": 0, "igst": 17400.00, "gstAmount": 17400.00, "supplierGstin": "09AABCY5678L1Z3", "buyerGstin": "07BUYER004DL1Z9", "hsn": "3004"},
+        {"invoiceNo": "INV032", "date": "2025-04-10", "taxableValue": 320000.00, "cgst": 0, "sgst": 0, "igst": 38400.00, "gstAmount": 38400.00, "supplierGstin": "09AABCY5678L1Z3", "buyerGstin": "27BUYER002MH1Z3", "hsn": "3003"},
+        {"invoiceNo": "INV033", "date": "2025-04-16", "taxableValue": 88000.00, "cgst": 0, "sgst": 0, "igst": 10560.00, "gstAmount": 10560.00, "supplierGstin": "09AABCY5678L1Z3", "buyerGstin": "29BUYER001KA1Z5", "hsn": "3004"},
+        {"invoiceNo": "INV034", "date": "2025-04-22", "taxableValue": 210000.00, "cgst": 0, "sgst": 0, "igst": 25200.00, "gstAmount": 25200.00, "supplierGstin": "09AABCY5678L1Z3", "buyerGstin": "33BUYER003TN1Z1", "hsn": "3003"},
+        {"invoiceNo": "INV035", "date": "2025-04-28", "taxableValue": 67000.00, "cgst": 0, "sgst": 0, "igst": 8040.00, "gstAmount": 8040.00, "supplierGstin": "09AABCY5678L1Z3", "buyerGstin": "24BUYER005GJ1Z7", "hsn": "3004"}
+      ]
+    },
+    {
+      "supplier": {"gstin": "32AABCZ9012M1Z1", "pan": "AABCZ9012M", "name": "Kerala Spice Traders", "state": "Kerala"},
+      "returns_info": {"id": "R008", "type": "GSTR1", "period": "042025", "status": "FILED", "filingDate": "2025-05-07", "gstin": "32AABCZ9012M1Z1"},
+      "invoices": [
+        {"invoiceNo": "INV036", "date": "2025-04-04", "taxableValue": 95000.00, "cgst": 0, "sgst": 0, "igst": 4750.00, "gstAmount": 4750.00, "supplierGstin": "32AABCZ9012M1Z1", "buyerGstin": "29BUYER001KA1Z5", "hsn": "0904"},
+        {"invoiceNo": "INV037", "date": "2025-04-11", "taxableValue": 180000.00, "cgst": 0, "sgst": 0, "igst": 9000.00, "gstAmount": 9000.00, "supplierGstin": "32AABCZ9012M1Z1", "buyerGstin": "07BUYER004DL1Z9", "hsn": "0906"},
+        {"invoiceNo": "INV038", "date": "2025-04-18", "taxableValue": 72000.00, "cgst": 0, "sgst": 0, "igst": 3600.00, "gstAmount": 3600.00, "supplierGstin": "32AABCZ9012M1Z1", "buyerGstin": "27BUYER002MH1Z3", "hsn": "0904"},
+        {"invoiceNo": "INV039", "date": "2025-04-24", "taxableValue": 135000.00, "cgst": 0, "sgst": 0, "igst": 6750.00, "gstAmount": 6750.00, "supplierGstin": "32AABCZ9012M1Z1", "buyerGstin": "24BUYER005GJ1Z7", "hsn": "0906"},
+        {"invoiceNo": "INV040", "date": "2025-04-30", "taxableValue": 48000.00, "cgst": 0, "sgst": 0, "igst": 2400.00, "gstAmount": 2400.00, "supplierGstin": "32AABCZ9012M1Z1", "buyerGstin": "33BUYER003TN1Z1", "hsn": "0904"}
+      ]
+    },
+    {
+      "supplier": {"gstin": "36AADCA3456N1Z9", "pan": "AADCA3456N", "name": "Telangana IT Services", "state": "Telangana"},
+      "returns_info": {"id": "R009", "type": "GSTR1", "period": "042025", "status": "LATE", "filingDate": "2025-05-28", "gstin": "36AADCA3456N1Z9"},
+      "invoices": [
+        {"invoiceNo": "INV041", "date": "2025-04-06", "taxableValue": 750000.00, "cgst": 0, "sgst": 0, "igst": 135000.00, "gstAmount": 135000.00, "supplierGstin": "36AADCA3456N1Z9", "buyerGstin": "27BUYER002MH1Z3", "hsn": "9983"},
+        {"invoiceNo": "INV042", "date": "2025-04-13", "taxableValue": 280000.00, "cgst": 0, "sgst": 0, "igst": 50400.00, "gstAmount": 50400.00, "supplierGstin": "36AADCA3456N1Z9", "buyerGstin": "29BUYER001KA1Z5", "hsn": "9983"},
+        {"invoiceNo": "INV043", "date": "2025-04-19", "taxableValue": 165000.00, "cgst": 0, "sgst": 0, "igst": 29700.00, "gstAmount": 29700.00, "supplierGstin": "36AADCA3456N1Z9", "buyerGstin": "07BUYER004DL1Z9", "hsn": "9984"},
+        {"invoiceNo": "INV044", "date": "2025-04-25", "taxableValue": 430000.00, "cgst": 0, "sgst": 0, "igst": 77400.00, "gstAmount": 77400.00, "supplierGstin": "36AADCA3456N1Z9", "buyerGstin": "33BUYER003TN1Z1", "hsn": "9983"},
+        {"invoiceNo": "INV045", "date": "2025-04-29", "taxableValue": 110000.00, "cgst": 0, "sgst": 0, "igst": 19800.00, "gstAmount": 19800.00, "supplierGstin": "36AADCA3456N1Z9", "buyerGstin": "24BUYER005GJ1Z7", "hsn": "9984"}
+      ]
+    },
+    {
+      "supplier": {"gstin": "19AADCB7890O1Z7", "pan": "AADCB7890O", "name": "Bengal Manufacturing Co", "state": "West Bengal"},
+      "returns_info": {"id": "R010", "type": "GSTR1", "period": "042025", "status": "FILED", "filingDate": "2025-05-06", "gstin": "19AADCB7890O1Z7"},
+      "invoices": [
+        {"invoiceNo": "INV046", "date": "2025-04-05", "taxableValue": 380000.00, "cgst": 0, "sgst": 0, "igst": 68400.00, "gstAmount": 68400.00, "supplierGstin": "19AADCB7890O1Z7", "buyerGstin": "29BUYER001KA1Z5", "hsn": "8431"},
+        {"invoiceNo": "INV047", "date": "2025-04-12", "taxableValue": 150000.00, "cgst": 0, "sgst": 0, "igst": 27000.00, "gstAmount": 27000.00, "supplierGstin": "19AADCB7890O1Z7", "buyerGstin": "07BUYER004DL1Z9", "hsn": "8432"},
+        {"invoiceNo": "INV048", "date": "2025-04-18", "taxableValue": 225000.00, "cgst": 0, "sgst": 0, "igst": 40500.00, "gstAmount": 40500.00, "supplierGstin": "19AADCB7890O1Z7", "buyerGstin": "27BUYER002MH1Z3", "hsn": "8431"},
+        {"invoiceNo": "INV049", "date": "2025-04-24", "taxableValue": 95000.00, "cgst": 0, "sgst": 0, "igst": 17100.00, "gstAmount": 17100.00, "supplierGstin": "19AADCB7890O1Z7", "buyerGstin": "24BUYER005GJ1Z7", "hsn": "8432"},
+        {"invoiceNo": "INV050", "date": "2025-04-30", "taxableValue": 175000.00, "cgst": 0, "sgst": 0, "igst": 31500.00, "gstAmount": 31500.00, "supplierGstin": "19AADCB7890O1Z7", "buyerGstin": "33BUYER003TN1Z1", "hsn": "8431"}
+      ]
+    }
+  ],
+  "gstr2b_filings": [
+    {
+      "buyer": {"gstin": "29BUYER001KA1Z5", "pan": "BUYER001KA", "name": "Bangalore Retail Corp", "state": "Karnataka"},
+      "returns_info": {"id": "R2B001", "type": "GSTR2B", "period": "042025", "status": "FILED", "filingDate": "2025-05-14", "gstin": "29BUYER001KA1Z5"},
+      "invoices": [
+        {"invoiceNo": "INV001", "date": "2025-04-05", "taxableValue": 100000.00, "gstAmount": 18000.00, "supplierGstin": "29AABCS1234F1Z5", "buyerGstin": "29BUYER001KA1Z5"},
+        {"invoiceNo": "INV003", "date": "2025-04-10", "taxableValue": 75000.00, "gstAmount": 13500.00, "supplierGstin": "29AABCS1234F1Z5", "buyerGstin": "29BUYER001KA1Z5"},
+        {"invoiceNo": "INV005", "date": "2025-04-20", "taxableValue": 50000.00, "gstAmount": 9000.00, "supplierGstin": "29AABCS1234F1Z5", "buyerGstin": "29BUYER001KA1Z5"},
+        {"invoiceNo": "INV012", "date": "2025-04-09", "taxableValue": 150000.00, "gstAmount": 27000.00, "supplierGstin": "33AABCU9012H1Z1", "buyerGstin": "29BUYER001KA1Z5"},
+        {"invoiceNo": "INV017", "date": "2025-04-11", "taxableValue": 68000.00, "gstAmount": 12240.00, "supplierGstin": "07AABCV3456I1Z9", "buyerGstin": "29BUYER001KA1Z5"},
+        {"invoiceNo": "INV027", "date": "2025-04-14", "taxableValue": 230000.00, "gstAmount": 41400.00, "supplierGstin": "06AABCX1234K1Z5", "buyerGstin": "29BUYER001KA1Z5"},
+        {"invoiceNo": "INV033", "date": "2025-04-16", "taxableValue": 88000.00, "gstAmount": 10560.00, "supplierGstin": "09AABCY5678L1Z3", "buyerGstin": "29BUYER001KA1Z5"},
+        {"invoiceNo": "INV036", "date": "2025-04-04", "taxableValue": 95000.00, "gstAmount": 4750.00, "supplierGstin": "32AABCZ9012M1Z1", "buyerGstin": "29BUYER001KA1Z5"},
+        {"invoiceNo": "INV042", "date": "2025-04-13", "taxableValue": 280000.00, "gstAmount": 50400.00, "supplierGstin": "36AADCA3456N1Z9", "buyerGstin": "29BUYER001KA1Z5"},
+        {"invoiceNo": "INV046", "date": "2025-04-05", "taxableValue": 380000.00, "gstAmount": 68400.00, "supplierGstin": "19AADCB7890O1Z7", "buyerGstin": "29BUYER001KA1Z5"}
+      ]
+    },
+    {
+      "buyer": {"gstin": "27BUYER002MH1Z3", "pan": "BUYER002MH", "name": "Mumbai Trading House", "state": "Maharashtra"},
+      "returns_info": {"id": "R2B002", "type": "GSTR2B", "period": "042025", "status": "FILED", "filingDate": "2025-05-14", "gstin": "27BUYER002MH1Z3"},
+      "invoices": [
+        {"invoiceNo": "INV002", "date": "2025-04-08", "taxableValue": 250000.00, "gstAmount": 45000.00, "supplierGstin": "29AABCS1234F1Z5", "buyerGstin": "27BUYER002MH1Z3"},
+        {"invoiceNo": "INV006", "date": "2025-04-03", "taxableValue": 500000.00, "gstAmount": 90000.00, "supplierGstin": "27AABCT5678G1Z3", "buyerGstin": "27BUYER002MH1Z3"},
+        {"invoiceNo": "INV008", "date": "2025-04-18", "taxableValue": 85000.00, "gstAmount": 15300.00, "supplierGstin": "27AABCT5678G1Z3", "buyerGstin": "27BUYER002MH1Z3"},
+        {"invoiceNo": "INV010", "date": "2025-04-28", "taxableValue": 95000.00, "gstAmount": 17100.00, "supplierGstin": "27AABCT5678G1Z3", "buyerGstin": "27BUYER002MH1Z3"},
+        {"invoiceNo": "INV018", "date": "2025-04-16", "taxableValue": 155000.00, "gstAmount": 27900.00, "supplierGstin": "07AABCV3456I1Z9", "buyerGstin": "27BUYER002MH1Z3"},
+        {"invoiceNo": "INV021", "date": "2025-04-06", "taxableValue": 300000.00, "gstAmount": 15000.00, "supplierGstin": "24AABCW7890J1Z7", "buyerGstin": "27BUYER002MH1Z3"},
+        {"invoiceNo": "INV026", "date": "2025-04-07", "taxableValue": 560000.00, "gstAmount": 100800.00, "supplierGstin": "06AABCX1234K1Z5", "buyerGstin": "27BUYER002MH1Z3"},
+        {"invoiceNo": "INV032", "date": "2025-04-10", "taxableValue": 320000.00, "gstAmount": 38400.00, "supplierGstin": "09AABCY5678L1Z3", "buyerGstin": "27BUYER002MH1Z3"},
+        {"invoiceNo": "INV038", "date": "2025-04-18", "taxableValue": 72000.00, "gstAmount": 3600.00, "supplierGstin": "32AABCZ9012M1Z1", "buyerGstin": "27BUYER002MH1Z3"},
+        {"invoiceNo": "INV041", "date": "2025-04-06", "taxableValue": 750000.00, "gstAmount": 135000.00, "supplierGstin": "36AADCA3456N1Z9", "buyerGstin": "27BUYER002MH1Z3"},
+        {"invoiceNo": "INV048", "date": "2025-04-18", "taxableValue": 225000.00, "gstAmount": 40500.00, "supplierGstin": "19AADCB7890O1Z7", "buyerGstin": "27BUYER002MH1Z3"}
+      ]
+    }
+  ],
+  "einvoice_data": {
+    "irn_entries": [
+      {"irnHash": "IRN_HASH_INV001_ABC123", "status": "ACTIVE", "invoiceNo": "INV001", "generatedDate": "2025-04-05"},
+      {"irnHash": "IRN_HASH_INV002_DEF456", "status": "ACTIVE", "invoiceNo": "INV002", "generatedDate": "2025-04-08"},
+      {"irnHash": "IRN_HASH_INV003_GHI789", "status": "ACTIVE", "invoiceNo": "INV003", "generatedDate": "2025-04-10"},
+      {"irnHash": "IRN_HASH_INV004_JKL012", "status": "ACTIVE", "invoiceNo": "INV004", "generatedDate": "2025-04-15"},
+      {"irnHash": "IRN_HASH_INV005_MNO345", "status": "ACTIVE", "invoiceNo": "INV005", "generatedDate": "2025-04-20"},
+      {"irnHash": "IRN_HASH_INV006_PQR678", "status": "ACTIVE", "invoiceNo": "INV006", "generatedDate": "2025-04-03"},
+      {"irnHash": "IRN_HASH_INV008_STU901", "status": "ACTIVE", "invoiceNo": "INV008", "generatedDate": "2025-04-18"},
+      {"irnHash": "IRN_HASH_INV010_VWX234", "status": "CANCELLED", "invoiceNo": "INV010", "generatedDate": "2025-04-28"},
+      {"irnHash": "IRN_HASH_INV011_YZA567", "status": "ACTIVE", "invoiceNo": "INV011", "generatedDate": "2025-04-02"},
+      {"irnHash": "IRN_HASH_INV012_BCD890", "status": "ACTIVE", "invoiceNo": "INV012", "generatedDate": "2025-04-09"},
+      {"irnHash": "IRN_HASH_INV014_EFG123", "status": "ACTIVE", "invoiceNo": "INV014", "generatedDate": "2025-04-19"},
+      {"irnHash": "IRN_HASH_INV016_HIJ456", "status": "ACTIVE", "invoiceNo": "INV016", "generatedDate": "2025-04-04"},
+      {"irnHash": "IRN_HASH_INV018_KLM789", "status": "ACTIVE", "invoiceNo": "INV018", "generatedDate": "2025-04-16"},
+      {"irnHash": "IRN_HASH_INV021_NOP012", "status": "ACTIVE", "invoiceNo": "INV021", "generatedDate": "2025-04-06"},
+      {"irnHash": "IRN_HASH_INV022_QRS345", "status": "ACTIVE", "invoiceNo": "INV022", "generatedDate": "2025-04-13"},
+      {"irnHash": "IRN_HASH_INV026_TUV678", "status": "ACTIVE", "invoiceNo": "INV026", "generatedDate": "2025-04-07"},
+      {"irnHash": "IRN_HASH_INV031_WXY901", "status": "ACTIVE", "invoiceNo": "INV031", "generatedDate": "2025-04-03"},
+      {"irnHash": "IRN_HASH_INV032_ZAB234", "status": "ACTIVE", "invoiceNo": "INV032", "generatedDate": "2025-04-10"},
+      {"irnHash": "IRN_HASH_INV036_CDE567", "status": "ACTIVE", "invoiceNo": "INV036", "generatedDate": "2025-04-04"},
+      {"irnHash": "IRN_HASH_INV041_FGH890", "status": "ACTIVE", "invoiceNo": "INV041", "generatedDate": "2025-04-06"},
+      {"irnHash": "IRN_HASH_INV042_IJK123", "status": "CANCELLED", "invoiceNo": "INV042", "generatedDate": "2025-04-13"},
+      {"irnHash": "IRN_HASH_INV046_LMN456", "status": "ACTIVE", "invoiceNo": "INV046", "generatedDate": "2025-04-05"},
+      {"irnHash": "IRN_HASH_INV048_OPQ789", "status": "ACTIVE", "invoiceNo": "INV048", "generatedDate": "2025-04-18"}
+    ]
+  },
+  "purchase_register_filings": [
+    {
+      "buyer": {"gstin": "29BUYER001KA1Z5", "pan": "BUYER001KA", "name": "Bangalore Retail Corp", "state": "Karnataka"},
+      "gstr3b": {"id": "R3B001", "type": "GSTR3B", "period": "042025", "status": "FILED", "filingDate": "2025-05-20", "gstin": "29BUYER001KA1Z5"},
+      "itc_claims": [
+        {"id": "ITC001", "amount": 255250.00, "period": "042025", "gstin": "29BUYER001KA1Z5"}
+      ],
+      "ledger_entries": [
+        {"id": "LED001", "mode": "CREDIT", "amount": 200000.00, "period": "042025", "gstin": "29BUYER001KA1Z5"},
+        {"id": "LED002", "mode": "CASH", "amount": 55250.00, "period": "042025", "gstin": "29BUYER001KA1Z5"}
+      ]
+    },
+    {
+      "buyer": {"gstin": "27BUYER002MH1Z3", "pan": "BUYER002MH", "name": "Mumbai Trading House", "state": "Maharashtra"},
+      "gstr3b": {"id": "R3B002", "type": "GSTR3B", "period": "042025", "status": "FILED", "filingDate": "2025-05-20", "gstin": "27BUYER002MH1Z3"},
+      "itc_claims": [
+        {"id": "ITC002", "amount": 528600.00, "period": "042025", "gstin": "27BUYER002MH1Z3"}
+      ],
+      "ledger_entries": [
+        {"id": "LED003", "mode": "CREDIT", "amount": 450000.00, "period": "042025", "gstin": "27BUYER002MH1Z3"},
+        {"id": "LED004", "mode": "CASH", "amount": 78600.00, "period": "042025", "gstin": "27BUYER002MH1Z3"}
+      ]
+    }
+  ],
+  "edge_cases": {
+    "description": "Deliberate mismatches for testing",
+    "missing_irn_invoices": ["INV007", "INV009", "INV013", "INV015", "INV017", "INV019", "INV020", "INV023", "INV024", "INV025", "INV027", "INV028", "INV029", "INV030", "INV033", "INV034", "INV035", "INV037", "INV038", "INV039", "INV040", "INV043", "INV044", "INV045", "INV047", "INV049", "INV050"],
+    "cancelled_irn_invoices": ["INV010", "INV042"],
+    "supplier_non_filing": ["06AABCX1234K1Z5"],
+    "late_filing_suppliers": ["27AABCT5678G1Z3", "36AADCA3456N1Z9"],
+    "invoices_not_in_gstr2b": ["INV004", "INV007", "INV009", "INV013", "INV015", "INV019", "INV020", "INV023", "INV024", "INV025", "INV028", "INV029", "INV030", "INV033", "INV034", "INV035", "INV037", "INV039", "INV040", "INV043", "INV044", "INV045", "INV047", "INV049", "INV050"]
+  }
+}

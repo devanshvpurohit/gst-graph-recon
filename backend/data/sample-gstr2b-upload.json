@@ -1,0 +1,32 @@
+{
+  "buyer": {
+    "gstin": "29BUYER_SAMPLE1Z5",
+    "pan": "BUYER_SAMPLE",
+    "name": "Sample Buyer Corporation",
+    "state": "Karnataka"
+  },
+  "returns_info": {
+    "id": "B_SAMPLE",
+    "type": "GSTR2B",
+    "period": "052025",
+    "status": "FILED",
+    "filingDate": "2025-06-15",
+    "gstin": "29BUYER_SAMPLE1Z5"
+  },
+  "invoices": [
+    {
+      "invoiceNo": "INV001",
+      "supplierGstin": "29AABCS1234F1Z5",
+      "taxableValue": 100000.00,
+      "gstAmount": 18000.00,
+      "status": "ACCEPTED"
+    },
+    {
+      "invoiceNo": "INV002",
+      "supplierGstin": "27AABCT5678G1Z3",
+      "taxableValue": 250000.00,
+      "gstAmount": 45000.00,
+      "status": "ACCEPTED"
+    }
+  ]
+}

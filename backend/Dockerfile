@@ -1,12 +1,21 @@
-FROM python:3.11-slim
+# Base image
+FROM node:20-alpine
 
-WORKDIR /app
+# Create app directory
+WORKDIR /usr/src/app
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Install dependencies
+COPY package*.json ./
+RUN npm ci
 
+# Copy source code
 COPY . .
 
+# Build TypeScript
+RUN npm run build
+
+# Expose API port
 EXPOSE 8000
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+# Start server
+CMD [ "npm", "start" ]

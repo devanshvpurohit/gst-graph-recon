@@ -1,0 +1,42 @@
+{
+  "supplier": {
+    "gstin": "29SAMPLE001F1Z5",
+    "pan": "SAMPLE001F",
+    "name": "Sample Supplier Ltd",
+    "state": "Karnataka"
+  },
+  "returns_info": {
+    "id": "R_SAMPLE",
+    "type": "GSTR1",
+    "period": "052025",
+    "status": "FILED",
+    "filingDate": "2025-06-10",
+    "gstin": "29SAMPLE001F1Z5"
+  },
+  "invoices": [
+    {
+      "invoiceNo": "SAMPLE001",
+      "date": "2025-05-05",
+      "taxableValue": 100000.00,
+      "cgst": 9000.00,
+      "sgst": 9000.00,
+      "igst": 0,
+      "gstAmount": 18000.00,
+      "supplierGstin": "29SAMPLE001F1Z5",
+      "buyerGstin": "29BUYER001KA1Z5",
+      "hsn": "7208"
+    },
+    {
+      "invoiceNo": "SAMPLE002",
+      "date": "2025-05-10",
+      "taxableValue": 250000.00,
+      "cgst": 0,
+      "sgst": 0,
+      "igst": 45000.00,
+      "gstAmount": 45000.00,
+      "supplierGstin": "29SAMPLE001F1Z5",
+      "buyerGstin": "27BUYER002MH1Z3",
+      "hsn": "7210"
+    }
+  ]
+}

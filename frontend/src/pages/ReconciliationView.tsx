@@ -2,19 +2,6 @@ import React, { useState } from 'react';
 import MismatchTable from '../components/MismatchTable';
 import { fetchReconciliation, fetchAuditTrail, ReconciliationResult, AuditTrail } from '../api/client';
 
-const MOCK_RESULTS: ReconciliationResult[] = [
-    { invoiceNo: 'INV001', supplierGSTIN: '29AABCS1234F1Z5', buyerGSTIN: '29BUYER001KA1Z5', status: 'VALID', riskLevel: 'LOW', rootCause: [], details: [] },
-    { invoiceNo: 'INV003', supplierGSTIN: '29AABCS1234F1Z5', buyerGSTIN: '29BUYER001KA1Z5', status: 'VALID', riskLevel: 'LOW', rootCause: [], details: [] },
-    { invoiceNo: 'INV005', supplierGSTIN: '29AABCS1234F1Z5', buyerGSTIN: '29BUYER001KA1Z5', status: 'VALID', riskLevel: 'LOW', rootCause: [], details: [] },
-    { invoiceNo: 'INV012', supplierGSTIN: '33AABCU9012H1Z1', buyerGSTIN: '29BUYER001KA1Z5', status: 'VALID', riskLevel: 'LOW', rootCause: [], details: [] },
-    { invoiceNo: 'INV017', supplierGSTIN: '07AABCV3456I1Z9', buyerGSTIN: '29BUYER001KA1Z5', status: 'MISMATCH', riskLevel: 'MEDIUM', rootCause: ['No IRN generated for this invoice'], details: [] },
-    { invoiceNo: 'INV027', supplierGSTIN: '06AABCX1234K1Z5', buyerGSTIN: '29BUYER001KA1Z5', status: 'MISMATCH', riskLevel: 'HIGH', rootCause: ['Supplier has not filed GSTR-1 for this period', 'No IRN generated for this invoice'], details: [] },
-    { invoiceNo: 'INV033', supplierGSTIN: '09AABCY5678L1Z3', buyerGSTIN: '29BUYER001KA1Z5', status: 'MISMATCH', riskLevel: 'MEDIUM', rootCause: ['No IRN generated for this invoice'], details: [] },
-    { invoiceNo: 'INV036', supplierGSTIN: '32AABCZ9012M1Z1', buyerGSTIN: '29BUYER001KA1Z5', status: 'VALID', riskLevel: 'LOW', rootCause: [], details: [] },
-    { invoiceNo: 'INV042', supplierGSTIN: '36AADCA3456N1Z9', buyerGSTIN: '29BUYER001KA1Z5', status: 'MISMATCH', riskLevel: 'HIGH', rootCause: ['Supplier filed GSTR-1 late', 'IRN has been cancelled'], details: [] },
-    { invoiceNo: 'INV046', supplierGSTIN: '19AADCB7890O1Z7', buyerGSTIN: '29BUYER001KA1Z5', status: 'VALID', riskLevel: 'LOW', rootCause: [], details: [] },
-];
-
 const BUYERS = [
     { gstin: '29BUYER001KA1Z5', name: 'Bangalore Retail Corp' },
     { gstin: '27BUYER002MH1Z3', name: 'Mumbai Trading House' },
@@ -26,18 +13,20 @@ const BUYERS = [
 export default function ReconciliationView() {
     const [selectedBuyer, setSelectedBuyer] = useState(BUYERS[0].gstin);
     const [period, setPeriod] = useState('042025');
-    const [results, setResults] = useState<ReconciliationResult[]>(MOCK_RESULTS);
+    const [results, setResults] = useState<ReconciliationResult[]>([]);
     const [auditTrail, setAuditTrail] = useState<AuditTrail | null>(null);
     const [loading, setLoading] = useState(false);
     const [auditLoading, setAuditLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
 
     const handleReconcile = async () => {
         setLoading(true);
+        setError(null);
         try {
             const data = await fetchReconciliation(selectedBuyer, period);
             setResults(data.results);
-        } catch {
-            setResults(MOCK_RESULTS);
+        } catch (err: any) {
+            setError(err.message || 'Failed to fetch reconciliation results');
         } finally {
             setLoading(false);
         }
@@ -48,22 +37,8 @@ export default function ReconciliationView() {
         try {
             const trail = await fetchAuditTrail(invoiceNo);
             setAuditTrail(trail);
-        } catch {
-            // Show mock audit trail
-            setAuditTrail({
-                invoiceNo,
-                supplierGSTIN: 'MOCK',
-                buyerGSTIN: selectedBuyer,
-                structuredReasoning: [
-                    { step: 1, check: 'Supplier Identity', status: 'PASS', detail: 'Supplier is registered' },
-                    { step: 2, check: 'GSTR-1 Filing', status: 'WARNING', detail: 'GSTR-1 filed late' },
-                    { step: 3, check: 'IRN Verification', status: 'FAIL', detail: 'No IRN generated' },
-                    { step: 4, check: 'GSTR-2B Reflection', status: 'PASS', detail: 'Invoice reflected in GSTR-2B' },
-                ],
-                plainEnglish: `Invoice ${invoiceNo} has been reviewed. The supplier filed GSTR-1 late and no IRN exists. Risk classified as MEDIUM.`,
-                recommendedActions: ['Contact supplier to generate IRN', 'Monitor filing patterns'],
-                riskLevel: 'MEDIUM',
-            });
+        } catch (err: any) {
+            alert('Failed to generate audit trail: ' + (err.message || 'Check backend'));
         } finally {
             setAuditLoading(false);
         }
@@ -179,8 +154,8 @@ export default function ReconciliationView() {
                         {auditTrail.structuredReasoning.map((step) => (
                             <div key={step.step} className="flex items-start gap-3 p-3 rounded-lg bg-white/[0.02]">
                                 <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 font-mono text-xs font-bold ${step.status === 'PASS' ? 'bg-emerald-500/15 text-emerald-400' :
-                                        step.status === 'WARNING' ? 'bg-amber-500/15 text-amber-400' :
-                                            'bg-red-500/15 text-red-400'
+                                    step.status === 'WARNING' ? 'bg-amber-500/15 text-amber-400' :
+                                        'bg-red-500/15 text-red-400'
                                     }`}>
                                     {step.status === 'PASS' ? '✓' : step.status === 'WARNING' ? '⚠' : '✗'}
                                 </div>

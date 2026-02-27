@@ -11,15 +11,21 @@ const api = axios.create({
 // ─── Types ──────────────────────────────────────────────────────────
 
 export interface DashboardSummary {
-    totalITC: number;
-    eligibleITC: number;
-    highRiskITC: number;
-    totalInvoices: number;
-    matchedInvoices: number;
-    mismatchedInvoices: number;
-    riskDistribution: { low: number; medium: number; high: number };
-    topRiskyVendors: { gstin: string; name: string; riskScore: number }[];
-    mismatchCategories: { missingGSTR1: number; irnIssues: number; valueMismatch: number };
+    totalItcReconciled: number;
+    totalMismatches: number;
+    invoicesProcessed: number;
+    taxpayers: number;
+
+    // Optional mappings to preserve UI rendering patterns
+    totalITC?: number;
+    eligibleITC?: number;
+    highRiskITC?: number;
+    totalInvoices?: number;
+    matchedInvoices?: number;
+    mismatchedInvoices?: number;
+    riskDistribution?: { low: number; medium: number; high: number };
+    topRiskyVendors?: { gstin: string; name: string; riskScore: number }[];
+    mismatchCategories?: { missingGSTR1: number; irnIssues: number; valueMismatch: number };
 }
 
 export interface ReconciliationResult {
@@ -55,7 +61,6 @@ export interface VendorRisk {
         networkRisk: number;
     };
     recommendation: string;
-    mlPrediction?: { predicted_risk: number; model: string; high_risk: boolean };
 }
 
 export interface AuditTrail {
@@ -84,16 +89,16 @@ export const fetchReconciliation = (buyerGstin: string, period: string) =>
     api.get<ReconciliationResponse>(`/reconcile/${buyerGstin}/${period}`).then(r => r.data);
 
 export const fetchVendorRisk = (gstin: string) =>
-    api.get<VendorRisk>(`/vendor-risk/${gstin}`).then(r => r.data);
+    api.get<VendorRisk>(`/risk/${gstin}`).then(r => r.data);
 
 export const fetchAllVendorRisks = () =>
-    api.get<{ vendors: VendorRisk[]; total: number }>('/vendor-risk').then(r => r.data);
+    api.get<{ vendors: VendorRisk[]; total: number }>('/risk').then(r => r.data);
 
 export const fetchAuditTrail = (invoiceNo: string) =>
     api.get<AuditTrail>(`/audit/${invoiceNo}`).then(r => r.data);
 
 export const fetchNetworkRisk = () =>
-    api.get<NetworkRisk>('/analytics/network-risk').then(r => r.data);
+    api.get<NetworkRisk>('/analytics').then(r => r.data);
 
 export const ingestGSTR1 = (data: any) =>
     api.post('/ingest/gstr1', data).then(r => r.data);
@@ -103,5 +108,11 @@ export const ingestGSTR2B = (data: any) =>
 
 export const ingestEInvoice = (data: any) =>
     api.post('/ingest/einvoice', data).then(r => r.data);
+
+export const fetchAIVendorAnalysis = (vendorData: VendorRisk) =>
+    api.post<{ analysis: string }>('/ai/analyze/vendor', { vendorData }).then(r => r.data);
+
+export const fetchAIInvoiceAnalysis = (auditTrail: AuditTrail) =>
+    api.post<{ analysis: string }>('/ai/analyze/invoice', { auditTrail }).then(r => r.data);
 
 export default api;

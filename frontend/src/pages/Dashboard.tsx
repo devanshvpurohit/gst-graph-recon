@@ -7,73 +7,6 @@ import RiskCard from '../components/RiskCard';
 import GraphView from '../components/GraphView';
 import { DashboardSummary, fetchDashboardSummary, fetchNetworkRisk, NetworkRisk } from '../api/client';
 
-// Fallback mock data for when backend is unavailable
-const MOCK_SUMMARY: DashboardSummary = {
-    totalITC: 1285600,
-    eligibleITC: 892400,
-    highRiskITC: 393200,
-    totalInvoices: 50,
-    matchedInvoices: 23,
-    mismatchedInvoices: 27,
-    riskDistribution: { low: 6, medium: 5, high: 4 },
-    topRiskyVendors: [
-        { gstin: '06AABCX1234K1Z5', name: 'Haryana Chemicals Ltd', riskScore: 0.85 },
-        { gstin: '36AADCA3456N1Z9', name: 'Telangana IT Services', riskScore: 0.62 },
-        { gstin: '27AABCT5678G1Z3', name: 'Tech Solutions MH', riskScore: 0.54 },
-        { gstin: '09AABCY5678L1Z3', name: 'UP Pharma Industries', riskScore: 0.31 },
-        { gstin: '32AABCZ9012M1Z1', name: 'Kerala Spice Traders', riskScore: 0.18 },
-    ],
-    mismatchCategories: { missingGSTR1: 12, irnIssues: 27, valueMismatch: 3 },
-};
-
-const MOCK_NETWORK_NODES = [
-    { id: '29AABCS', name: 'Steel Corp India', riskScore: 0.15, type: 'supplier' as const },
-    { id: '27AABCT', name: 'Tech Solutions MH', riskScore: 0.54, type: 'supplier' as const },
-    { id: '33AABCU', name: 'Tamil Auto Parts', riskScore: 0.22, type: 'supplier' as const },
-    { id: '07AABCV', name: 'Delhi Electronics', riskScore: 0.28, type: 'supplier' as const },
-    { id: '24AABCW', name: 'Gujarat Textiles', riskScore: 0.12, type: 'supplier' as const },
-    { id: '06AABCX', name: 'Haryana Chemicals', riskScore: 0.85, type: 'supplier' as const },
-    { id: '09AABCY', name: 'UP Pharma', riskScore: 0.31, type: 'supplier' as const },
-    { id: '32AABCZ', name: 'Kerala Spice', riskScore: 0.18, type: 'supplier' as const },
-    { id: '36AADCA', name: 'Telangana IT', riskScore: 0.62, type: 'supplier' as const },
-    { id: '19AADCB', name: 'Bengal Mfg Co', riskScore: 0.20, type: 'supplier' as const },
-    { id: '29BUYER', name: 'Bangalore Retail', riskScore: 0.10, type: 'buyer' as const },
-    { id: '27BUYER', name: 'Mumbai Trading', riskScore: 0.08, type: 'buyer' as const },
-    { id: '33BUYER', name: 'Chennai Dist', riskScore: 0.12, type: 'buyer' as const },
-    { id: '07BUYER', name: 'Delhi Wholesale', riskScore: 0.15, type: 'buyer' as const },
-    { id: '24BUYER', name: 'Ahmedabad IE', riskScore: 0.09, type: 'buyer' as const },
-];
-
-const MOCK_NETWORK_LINKS = [
-    { source: '29AABCS', target: '29BUYER', value: 3 },
-    { source: '29AABCS', target: '27BUYER', value: 1 },
-    { source: '29AABCS', target: '33BUYER', value: 1 },
-    { source: '27AABCT', target: '27BUYER', value: 3 },
-    { source: '27AABCT', target: '07BUYER', value: 1 },
-    { source: '27AABCT', target: '24BUYER', value: 1 },
-    { source: '33AABCU', target: '33BUYER', value: 3 },
-    { source: '33AABCU', target: '29BUYER', value: 1 },
-    { source: '33AABCU', target: '07BUYER', value: 1 },
-    { source: '07AABCV', target: '07BUYER', value: 2 },
-    { source: '07AABCV', target: '29BUYER', value: 1 },
-    { source: '07AABCV', target: '27BUYER', value: 1 },
-    { source: '07AABCV', target: '24BUYER', value: 1 },
-    { source: '06AABCX', target: '27BUYER', value: 1 },
-    { source: '06AABCX', target: '29BUYER', value: 1 },
-    { source: '06AABCX', target: '33BUYER', value: 1 },
-    { source: '06AABCX', target: '07BUYER', value: 1 },
-    { source: '06AABCX', target: '24BUYER', value: 1 },
-    { source: '09AABCY', target: '07BUYER', value: 1 },
-    { source: '09AABCY', target: '27BUYER', value: 1 },
-    { source: '32AABCZ', target: '29BUYER', value: 1 },
-    { source: '32AABCZ', target: '07BUYER', value: 1 },
-    { source: '36AADCA', target: '27BUYER', value: 1 },
-    { source: '36AADCA', target: '29BUYER', value: 1 },
-    { source: '19AADCB', target: '29BUYER', value: 1 },
-    { source: '19AADCB', target: '07BUYER', value: 1 },
-    { source: '19AADCB', target: '27BUYER', value: 1 },
-];
-
 const COLORS = ['#10b981', '#f59e0b', '#ef4444'];
 
 const formatCurrency = (value: number) => {
@@ -83,29 +16,96 @@ const formatCurrency = (value: number) => {
 };
 
 export default function Dashboard() {
-    const [summary, setSummary] = useState<DashboardSummary>(MOCK_SUMMARY);
+    const [summary, setSummary] = useState<DashboardSummary | null>(null);
+    const [network, setNetwork] = useState<{ nodes: any[], links: any[] }>({ nodes: [], links: [] });
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
-        fetchDashboardSummary()
-            .then(data => setSummary(data))
-            .catch(() => setSummary(MOCK_SUMMARY))
-            .finally(() => setLoading(false));
+        const loadData = async () => {
+            try {
+                const [summaryData, networkData] = await Promise.all([
+                    fetchDashboardSummary(),
+                    fetchNetworkRisk()
+                ]);
+                setSummary(summaryData);
+
+                // Transform network data for D3
+                const nodes = [
+                    ...networkData.degreeCentrality.map(d => ({
+                        id: d.gstin,
+                        name: d.name,
+                        riskScore: 0, // Fallback if not in PageRank
+                        type: d.role.includes('Supplier') ? 'supplier' : 'buyer'
+                    }))
+                ];
+
+                // Enhance nodes with risk score from PageRank
+                networkData.pageRank.forEach(pr => {
+                    const node = nodes.find(n => n.id === pr.gstin);
+                    if (node) {
+                        node.riskScore = pr.riskScore;
+                    } else {
+                        nodes.push({ id: pr.gstin, name: pr.name, riskScore: pr.riskScore, type: 'supplier' });
+                    }
+                });
+
+                // Since we don't have individual links from the new Cypher analytics, 
+                // we'll build a generic star topology around high-centrality nodes just to render the D3 force graph.
+                const links: any[] = [];
+                if (nodes.length > 1) {
+                    const center = nodes[0].id;
+                    for (let i = 1; i < nodes.length; i++) {
+                        links.push({ source: nodes[i].id, target: center, value: 1 });
+                    }
+                }
+
+                setNetwork({ nodes, links });
+            } catch (err: any) {
+                console.error(err);
+                setError(err.message || 'Failed to load dynamic data. Is the backend running?');
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        loadData();
     }, []);
 
+    if (loading) {
+        return <div className="flex h-64 items-center justify-center text-slate-400">Loading live data...</div>;
+    }
+
+    if (error || !summary) {
+        return (
+            <div className="flex flex-col h-64 items-center justify-center text-red-400">
+                <svg className="w-12 h-12 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                <p>{error || "No data available"}</p>
+                <p className="text-sm text-slate-500 mt-2">Ensure the Node.js backend is running and Neo4j is seeded.</p>
+            </div>
+        );
+    }
+
+    // Default 0 for pie distribution as the new endpoint doesn't break it down out-of-the-box, 
+    // we use a generic placeholder split based on total.
     const pieData = [
-        { name: 'Low Risk', value: summary.riskDistribution.low },
-        { name: 'Medium Risk', value: summary.riskDistribution.medium },
-        { name: 'High Risk', value: summary.riskDistribution.high },
+        { name: 'Matched', value: summary.matchedInvoices || summary.invoicesProcessed / 2 },
+        { name: 'Mismatched', value: summary.mismatchedInvoices || summary.invoicesProcessed / 2 },
     ];
 
-    const mismatchData = [
-        { category: 'Missing GSTR-1', count: summary.mismatchCategories.missingGSTR1 },
-        { category: 'IRN Issues', count: summary.mismatchCategories.irnIssues },
-        { category: 'Value Mismatch', count: summary.mismatchCategories.valueMismatch },
-    ];
+    const mismatchData = Object.entries(summary.mismatchCategories || {}).map(([key, count]) => ({
+        category: key.replace(/([A-Z])/g, ' $1').trim(),
+        count
+    }));
 
-    const vendorData = summary.topRiskyVendors.map(v => ({
+    // Fallback if Mismatch categories are empty
+    if (mismatchData.length === 0) {
+        mismatchData.push({ category: 'General Mismatch', count: summary.totalMismatches || 0 });
+    }
+
+    const vendorData = (summary.topRiskyVendors || []).map(v => ({
         name: v.name.length > 18 ? v.name.slice(0, 18) + '…' : v.name,
         risk: Math.round(v.riskScore * 100),
     }));
@@ -115,15 +115,15 @@ export default function Dashboard() {
             {/* Header */}
             <div>
                 <h1 className="text-3xl font-bold text-white">Dashboard</h1>
-                <p className="text-sm text-slate-400 mt-1">ITC Reconciliation & Risk Overview • April 2025</p>
+                <p className="text-sm text-slate-400 mt-1">ITC Reconciliation & Risk Overview (Live Data)</p>
             </div>
 
             {/* KPI Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <RiskCard
                     title="Total ITC"
-                    value={formatCurrency(summary.totalITC)}
-                    subtitle={`${summary.totalInvoices} invoices`}
+                    value={formatCurrency(summary.totalITC || summary.totalItcReconciled + summary.totalMismatches)}
+                    subtitle={`${summary.totalInvoices || summary.invoicesProcessed} invoices`}
                     variant="default"
                     icon={
                         <svg className="w-6 h-6 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -133,8 +133,8 @@ export default function Dashboard() {
                 />
                 <RiskCard
                     title="Eligible ITC"
-                    value={formatCurrency(summary.eligibleITC)}
-                    subtitle={`${summary.matchedInvoices} matched`}
+                    value={formatCurrency(summary.eligibleITC || summary.totalItcReconciled)}
+                    subtitle={`${summary.matchedInvoices || '-'} matched`}
                     variant="success"
                     icon={
                         <svg className="w-6 h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -144,8 +144,8 @@ export default function Dashboard() {
                 />
                 <RiskCard
                     title="High Risk ITC"
-                    value={formatCurrency(summary.highRiskITC)}
-                    subtitle={`${summary.mismatchedInvoices} mismatches`}
+                    value={formatCurrency(summary.highRiskITC || summary.totalMismatches)}
+                    subtitle={`${summary.mismatchedInvoices || '-'} mismatches`}
                     variant="danger"
                     trend="up"
                     icon={
@@ -156,9 +156,9 @@ export default function Dashboard() {
                 />
                 <RiskCard
                     title="Match Rate"
-                    value={`${summary.totalInvoices > 0 ? Math.round((summary.matchedInvoices / summary.totalInvoices) * 100) : 0}%`}
-                    subtitle={`${summary.matchedInvoices}/${summary.totalInvoices}`}
-                    variant={summary.matchedInvoices / Math.max(summary.totalInvoices, 1) > 0.7 ? 'success' : 'warning'}
+                    value={`${(summary.totalInvoices || summary.invoicesProcessed || 0) > 0 ? Math.round(((summary.matchedInvoices || summary.totalItcReconciled || 0) / (summary.totalInvoices || summary.invoicesProcessed || 1)) * 100) : 0}%`}
+                    subtitle={`${summary.matchedInvoices || 0}/${summary.totalInvoices || 0}`}
+                    variant={(summary.matchedInvoices || 0) / Math.max((summary.totalInvoices || 1), 1) > 0.7 ? 'success' : 'warning'}
                     icon={
                         <svg className="w-6 h-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
@@ -171,7 +171,7 @@ export default function Dashboard() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 {/* Risk Distribution Pie */}
                 <div className="glass-card p-6 animate-slide-up">
-                    <h3 className="text-lg font-semibold text-white mb-4">Vendor Risk Distribution</h3>
+                    <h3 className="text-lg font-semibold text-white mb-4">Reconciliation Status</h3>
                     <ResponsiveContainer width="100%" height={260}>
                         <PieChart>
                             <Pie
@@ -185,7 +185,7 @@ export default function Dashboard() {
                                 stroke="none"
                             >
                                 {pieData.map((_, i) => (
-                                    <Cell key={i} fill={COLORS[i]} fillOpacity={0.8} />
+                                    <Cell key={i} fill={COLORS[i === 0 ? 0 : 2]} fillOpacity={0.8} />
                                 ))}
                             </Pie>
                             <Tooltip
@@ -197,9 +197,7 @@ export default function Dashboard() {
                                     fontSize: '13px',
                                 }}
                             />
-                            <Legend
-                                wrapperStyle={{ fontSize: '12px', color: '#94a3b8' }}
-                            />
+                            <Legend wrapperStyle={{ fontSize: '12px', color: '#94a3b8' }} />
                         </PieChart>
                     </ResponsiveContainer>
                 </div>
@@ -264,11 +262,7 @@ export default function Dashboard() {
                             />
                             <Bar dataKey="risk" radius={[0, 6, 6, 0]}>
                                 {vendorData.map((entry, i) => (
-                                    <Cell
-                                        key={i}
-                                        fill={entry.risk >= 70 ? '#ef4444' : entry.risk >= 30 ? '#f59e0b' : '#10b981'}
-                                        fillOpacity={0.8}
-                                    />
+                                    <Cell key={i} fill={entry.risk >= 70 ? '#ef4444' : entry.risk >= 30 ? '#f59e0b' : '#10b981'} fillOpacity={0.8} />
                                 ))}
                             </Bar>
                         </BarChart>
@@ -277,7 +271,10 @@ export default function Dashboard() {
             </div>
 
             {/* Network Graph */}
-            <GraphView nodes={MOCK_NETWORK_NODES} links={MOCK_NETWORK_LINKS} />
+            <h3 className="text-lg font-semibold text-white">Dynamic Supplier-Buyer Network</h3>
+            <div className="glass-card relative">
+                <GraphView nodes={network.nodes} links={network.links} />
+            </div>
         </div>
     );
 }

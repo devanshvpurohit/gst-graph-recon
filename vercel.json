@@ -1,7 +1,6 @@
 {
   "buildCommand": "npm install && cd backend && npm install && cd ../frontend && npm install && cd .. && npm run build:backend && npm run build:frontend",
   "outputDirectory": "frontend/dist",
-  "nodeVersion": "18.x",
   "functions": {
     "api/**/*.ts": {
       "runtime": "@vercel/node@3.0.0"

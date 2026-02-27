@@ -4,13 +4,15 @@
   "description": "GST Knowledge Graph Reconciliation Engine",
   "private": true,
   "scripts": {
-    "build:all": "npm run build:backend && npm run build:frontend",
+    "build:all": "npm run install:all && npm run build:backend && npm run build:frontend",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install && cd ..",
     "build:backend": "cd backend && npm run build",
     "build:frontend": "cd frontend && npm run build",
     "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\"",
     "start": "node backend/dist/server.js"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "typescript": "^5.3.3"
   }
 }

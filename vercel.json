@@ -1,6 +1,14 @@
 {
-  "buildCommand": "npm run build:all",
-  "outputDirectory": "dist",
+  "buildCommand": "npm install && cd backend && npm install && cd ../frontend && npm install && cd .. && npm run build:backend && npm run build:frontend",
+  "outputDirectory": "frontend/dist",
+  "functions": {
+    "api/**/*.ts": {
+      "runtime": "@vercel/node@3.0.0"
+    }
+  },
+  "env": {
+    "NODE_ENV": "production"
+  },
   "rewrites": [
     {
       "source": "/api/(.*)",

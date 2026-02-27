@@ -12,9 +12,14 @@ async function seedDatabase() {
     try {
         await db.initConstraints();
 
-        const dataPath = path.join(__dirname, '../data/mock_dataset.json');
+        // Try to load the larger dataset first, fall back to smaller one
+        let dataPath = path.join(__dirname, '../data/mock_dataset_large.json');
         if (!fs.existsSync(dataPath)) {
-            console.warn('⚠️ No mock_dataset.json found. Skipping seeding.');
+            dataPath = path.join(__dirname, '../data/mock_dataset.json');
+        }
+
+        if (!fs.existsSync(dataPath)) {
+            console.warn('⚠️ No mock dataset found. Skipping seeding.');
             return;
         }
 
@@ -23,6 +28,7 @@ async function seedDatabase() {
 
         console.log('Loading GSTR-1 Data...');
         if (dataset.gstr1_filings && Array.isArray(dataset.gstr1_filings)) {
+            console.log(`  📊 Processing ${dataset.gstr1_filings.length} suppliers...`);
             for (const data of dataset.gstr1_filings) {
                 await loadGSTR1(data);
             }
@@ -49,7 +55,8 @@ async function seedDatabase() {
             }
         }
 
-        console.log('✅ Database seeding complete. Application is dynamic and ready!');
+        const totalInvoices = dataset.gstr1_filings?.reduce((sum: number, f: any) => sum + (f.invoices?.length || 0), 0) || 0;
+        console.log(`✅ Database seeding complete. Loaded ${dataset.gstr1_filings?.length || 0} suppliers with ${totalInvoices} invoices!`);
     } catch (err) {
         console.error('❌ Seeding failed:', err);
     } finally {

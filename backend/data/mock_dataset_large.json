@@ -1,0 +1,1559 @@
+{
+  "suppliers": [
+    {
+      "gstin": "29AABCS1234F1Z5",
+      "pan": "AABCS1234F",
+      "name": "Steel Corp India Pvt Ltd",
+      "state": "Karnataka"
+    },
+    {
+      "gstin": "27AABCT5678G1Z3",
+      "pan": "AABCT5678G",
+      "name": "Tech Solutions Maharashtra",
+      "state": "Maharashtra"
+    },
+    {
+      "gstin": "33AABCU9012H1Z1",
+      "pan": "AABCU9012H",
+      "name": "Tamil Auto Parts Ltd",
+      "state": "Tamil Nadu"
+    },
+    {
+      "gstin": "07AABCV3456I1Z9",
+      "pan": "AABCV3456I",
+      "name": "Delhi Electronics Hub",
+      "state": "Delhi"
+    },
+    {
+      "gstin": "24AABCW7890J1Z7",
+      "pan": "AABCW7890J",
+      "name": "Gujarat Textiles Pvt Ltd",
+      "state": "Gujarat"
+    },
+    {
+      "gstin": "06AABCX1234K1Z5",
+      "pan": "AABCX1234K",
+      "name": "Haryana Chemicals Ltd",
+      "state": "Haryana"
+    },
+    {
+      "gstin": "09AABCY5678L1Z3",
+      "pan": "AABCY5678L",
+      "name": "UP Pharma Industries",
+      "state": "Uttar Pradesh"
+    },
+    {
+      "gstin": "32AABCZ9012M1Z1",
+      "pan": "AABCZ9012M",
+      "name": "Kerala Spice Traders",
+      "state": "Kerala"
+    },
+    {
+      "gstin": "36AADCA3456N1Z9",
+      "pan": "AADCA3456N",
+      "name": "Telangana IT Services",
+      "state": "Telangana"
+    },
+    {
+      "gstin": "19AADCB7890O1Z7",
+      "pan": "AADCB7890O",
+      "name": "Bengal Manufacturing Co",
+      "state": "West Bengal"
+    },
+    {
+      "gstin": "08AADCC1234P1Z5",
+      "pan": "AADCC1234P",
+      "name": "Rajasthan Minerals Ltd",
+      "state": "Rajasthan"
+    },
+    {
+      "gstin": "10AADCD5678Q1Z3",
+      "pan": "AADCD5678Q",
+      "name": "Himachal Hydro Power",
+      "state": "Himachal Pradesh"
+    },
+    {
+      "gstin": "12AADCE9012R1Z1",
+      "pan": "AADCE9012R",
+      "name": "Punjab Agro Exports",
+      "state": "Punjab"
+    },
+    {
+      "gstin": "14AADCF3456S1Z9",
+      "pan": "AADCF3456S",
+      "name": "Haryana Dairy Products",
+      "state": "Haryana"
+    },
+    {
+      "gstin": "16AADCG7890T1Z7",
+      "pan": "AADCG7890T",
+      "name": "Goa Tourism Services",
+      "state": "Goa"
+    }
+  ],
+  "buyers": [
+    {
+      "gstin": "29BUYER001KA1Z5",
+      "pan": "BUYER001KA",
+      "name": "Bangalore Retail Corp",
+      "state": "Karnataka"
+    },
+    {
+      "gstin": "27BUYER002MH1Z3",
+      "pan": "BUYER002MH",
+      "name": "Mumbai Trading House",
+      "state": "Maharashtra"
+    },
+    {
+      "gstin": "33BUYER003TN1Z1",
+      "pan": "BUYER003TN",
+      "name": "Chennai Distributors",
+      "state": "Tamil Nadu"
+    },
+    {
+      "gstin": "07BUYER004DL1Z9",
+      "pan": "BUYER004DL",
+      "name": "Delhi Wholesale Market",
+      "state": "Delhi"
+    },
+    {
+      "gstin": "24BUYER005GJ1Z7",
+      "pan": "BUYER005GJ",
+      "name": "Ahmedabad Import Export",
+      "state": "Gujarat"
+    },
+    {
+      "gstin": "06BUYER006HR1Z5",
+      "pan": "BUYER006HR",
+      "name": "Gurgaon Logistics Ltd",
+      "state": "Haryana"
+    },
+    {
+      "gstin": "09BUYER007UP1Z3",
+      "pan": "BUYER007UP",
+      "name": "Lucknow Retail Chain",
+      "state": "Uttar Pradesh"
+    },
+    {
+      "gstin": "32BUYER008KL1Z1",
+      "pan": "BUYER008KL",
+      "name": "Kochi Trade Center",
+      "state": "Kerala"
+    }
+  ],
+  "gstr1_filings": [
+    {
+      "supplier": {
+        "gstin": "29AABCS1234F1Z5",
+        "pan": "AABCS1234F",
+        "name": "Steel Corp India Pvt Ltd",
+        "state": "Karnataka"
+      },
+      "returns_info": {
+        "id": "R001",
+        "type": "GSTR1",
+        "period": "042025",
+        "status": "LATE",
+        "filingDate": "2025-05-09",
+        "gstin": "29AABCS1234F1Z5"
+      },
+      "invoices": [
+        {
+          "invoiceNo": "INV0001",
+          "date": "2025-04-18",
+          "taxableValue": 350631,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 63114,
+          "gstAmount": 63114,
+          "supplierGstin": "29AABCS1234F1Z5",
+          "buyerGstin": "07BUYER004DL1Z9",
+          "hsn": "7694"
+        },
+        {
+          "invoiceNo": "INV0002",
+          "date": "2025-04-20",
+          "taxableValue": 65840,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 11851,
+          "gstAmount": 11851,
+          "supplierGstin": "29AABCS1234F1Z5",
+          "buyerGstin": "24BUYER005GJ1Z7",
+          "hsn": "2838"
+        },
+        {
+          "invoiceNo": "INV0003",
+          "date": "2025-04-08",
+          "taxableValue": 249484,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 44907,
+          "gstAmount": 44907,
+          "supplierGstin": "29AABCS1234F1Z5",
+          "buyerGstin": "09BUYER007UP1Z3",
+          "hsn": "9378"
+        },
+        {
+          "invoiceNo": "INV0004",
+          "date": "2025-04-21",
+          "taxableValue": 150434,
+          "cgst": 13539,
+          "sgst": 13539,
+          "igst": 0,
+          "gstAmount": 27078,
+          "supplierGstin": "29AABCS1234F1Z5",
+          "buyerGstin": "29BUYER001KA1Z5",
+          "hsn": "8595"
+        },
+        {
+          "invoiceNo": "INV0005",
+          "date": "2025-04-23",
+          "taxableValue": 479681,
+          "cgst": 43171,
+          "sgst": 43171,
+          "igst": 0,
+          "gstAmount": 86342,
+          "supplierGstin": "29AABCS1234F1Z5",
+          "buyerGstin": "29BUYER001KA1Z5",
+          "hsn": "1505"
+        }
+      ]
+    },
+    {
+      "supplier": {
+        "gstin": "27AABCT5678G1Z3",
+        "pan": "AABCT5678G",
+        "name": "Tech Solutions Maharashtra",
+        "state": "Maharashtra"
+      },
+      "returns_info": {
+        "id": "R002",
+        "type": "GSTR1",
+        "period": "042025",
+        "status": "NOT_FILED",
+        "filingDate": null,
+        "gstin": "27AABCT5678G1Z3"
+      },
+      "invoices": [
+        {
+          "invoiceNo": "INV0101",
+          "date": "2025-04-20",
+          "taxableValue": 190608,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 34309,
+          "gstAmount": 34309,
+          "supplierGstin": "27AABCT5678G1Z3",
+          "buyerGstin": "29BUYER001KA1Z5",
+          "hsn": "3092"
+        },
+        {
+          "invoiceNo": "INV0102",
+          "date": "2025-04-24",
+          "taxableValue": 95749,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 17235,
+          "gstAmount": 17235,
+          "supplierGstin": "27AABCT5678G1Z3",
+          "buyerGstin": "07BUYER004DL1Z9",
+          "hsn": "3778"
+        },
+        {
+          "invoiceNo": "INV0103",
+          "date": "2025-04-16",
+          "taxableValue": 209880,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 37778,
+          "gstAmount": 37778,
+          "supplierGstin": "27AABCT5678G1Z3",
+          "buyerGstin": "33BUYER003TN1Z1",
+          "hsn": "8078"
+        },
+        {
+          "invoiceNo": "INV0104",
+          "date": "2025-04-16",
+          "taxableValue": 495738,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 89233,
+          "gstAmount": 89233,
+          "supplierGstin": "27AABCT5678G1Z3",
+          "buyerGstin": "24BUYER005GJ1Z7",
+          "hsn": "2485"
+        },
+        {
+          "invoiceNo": "INV0105",
+          "date": "2025-04-19",
+          "taxableValue": 339062,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 61031,
+          "gstAmount": 61031,
+          "supplierGstin": "27AABCT5678G1Z3",
+          "buyerGstin": "09BUYER007UP1Z3",
+          "hsn": "2704"
+        },
+        {
+          "invoiceNo": "INV0106",
+          "date": "2025-04-26",
+          "taxableValue": 53852,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 9693,
+          "gstAmount": 9693,
+          "supplierGstin": "27AABCT5678G1Z3",
+          "buyerGstin": "06BUYER006HR1Z5",
+          "hsn": "4038"
+        },
+        {
+          "invoiceNo": "INV0107",
+          "date": "2025-04-13",
+          "taxableValue": 100250,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 18045,
+          "gstAmount": 18045,
+          "supplierGstin": "27AABCT5678G1Z3",
+          "buyerGstin": "33BUYER003TN1Z1",
+          "hsn": "9186"
+        }
+      ]
+    },
+    {
+      "supplier": {
+        "gstin": "33AABCU9012H1Z1",
+        "pan": "AABCU9012H",
+        "name": "Tamil Auto Parts Ltd",
+        "state": "Tamil Nadu"
+      },
+      "returns_info": {
+        "id": "R003",
+        "type": "GSTR1",
+        "period": "042025",
+        "status": "FILED",
+        "filingDate": "2025-05-13",
+        "gstin": "33AABCU9012H1Z1"
+      },
+      "invoices": [
+        {
+          "invoiceNo": "INV0201",
+          "date": "2025-04-13",
+          "taxableValue": 296055,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 53290,
+          "gstAmount": 53290,
+          "supplierGstin": "33AABCU9012H1Z1",
+          "buyerGstin": "29BUYER001KA1Z5",
+          "hsn": "8339"
+        },
+        {
+          "invoiceNo": "INV0202",
+          "date": "2025-04-09",
+          "taxableValue": 507481,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 91347,
+          "gstAmount": 91347,
+          "supplierGstin": "33AABCU9012H1Z1",
+          "buyerGstin": "29BUYER001KA1Z5",
+          "hsn": "7178"
+        },
+        {
+          "invoiceNo": "INV0203",
+          "date": "2025-04-17",
+          "taxableValue": 180136,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 32424,
+          "gstAmount": 32424,
+          "supplierGstin": "33AABCU9012H1Z1",
+          "buyerGstin": "06BUYER006HR1Z5",
+          "hsn": "8728"
+        },
+        {
+          "invoiceNo": "INV0204",
+          "date": "2025-04-10",
+          "taxableValue": 166527,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 29975,
+          "gstAmount": 29975,
+          "supplierGstin": "33AABCU9012H1Z1",
+          "buyerGstin": "06BUYER006HR1Z5",
+          "hsn": "8881"
+        },
+        {
+          "invoiceNo": "INV0205",
+          "date": "2025-04-05",
+          "taxableValue": 356552,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 64179,
+          "gstAmount": 64179,
+          "supplierGstin": "33AABCU9012H1Z1",
+          "buyerGstin": "09BUYER007UP1Z3",
+          "hsn": "1276"
+        },
+        {
+          "invoiceNo": "INV0206",
+          "date": "2025-04-20",
+          "taxableValue": 223052,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 40149,
+          "gstAmount": 40149,
+          "supplierGstin": "33AABCU9012H1Z1",
+          "buyerGstin": "06BUYER006HR1Z5",
+          "hsn": "1677"
+        },
+        {
+          "invoiceNo": "INV0207",
+          "date": "2025-04-08",
+          "taxableValue": 541998,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 97560,
+          "gstAmount": 97560,
+          "supplierGstin": "33AABCU9012H1Z1",
+          "buyerGstin": "09BUYER007UP1Z3",
+          "hsn": "9541"
+        },
+        {
+          "invoiceNo": "INV0208",
+          "date": "2025-04-24",
+          "taxableValue": 407743,
+          "cgst": 36697,
+          "sgst": 36697,
+          "igst": 0,
+          "gstAmount": 73394,
+          "supplierGstin": "33AABCU9012H1Z1",
+          "buyerGstin": "33BUYER003TN1Z1",
+          "hsn": "9434"
+        }
+      ]
+    },
+    {
+      "supplier": {
+        "gstin": "07AABCV3456I1Z9",
+        "pan": "AABCV3456I",
+        "name": "Delhi Electronics Hub",
+        "state": "Delhi"
+      },
+      "returns_info": {
+        "id": "R004",
+        "type": "GSTR1",
+        "period": "042025",
+        "status": "NOT_FILED",
+        "filingDate": null,
+        "gstin": "07AABCV3456I1Z9"
+      },
+      "invoices": [
+        {
+          "invoiceNo": "INV0301",
+          "date": "2025-04-03",
+          "taxableValue": 141492,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 25469,
+          "gstAmount": 25469,
+          "supplierGstin": "07AABCV3456I1Z9",
+          "buyerGstin": "29BUYER001KA1Z5",
+          "hsn": "7599"
+        },
+        {
+          "invoiceNo": "INV0302",
+          "date": "2025-04-10",
+          "taxableValue": 404167,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 72750,
+          "gstAmount": 72750,
+          "supplierGstin": "07AABCV3456I1Z9",
+          "buyerGstin": "09BUYER007UP1Z3",
+          "hsn": "6864"
+        },
+        {
+          "invoiceNo": "INV0303",
+          "date": "2025-04-06",
+          "taxableValue": 167920,
+          "cgst": 15113,
+          "sgst": 15113,
+          "igst": 0,
+          "gstAmount": 30226,
+          "supplierGstin": "07AABCV3456I1Z9",
+          "buyerGstin": "07BUYER004DL1Z9",
+          "hsn": "6140"
+        },
+        {
+          "invoiceNo": "INV0304",
+          "date": "2025-04-25",
+          "taxableValue": 159792,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 28763,
+          "gstAmount": 28763,
+          "supplierGstin": "07AABCV3456I1Z9",
+          "buyerGstin": "32BUYER008KL1Z1",
+          "hsn": "3401"
+        },
+        {
+          "invoiceNo": "INV0305",
+          "date": "2025-04-18",
+          "taxableValue": 542981,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 97737,
+          "gstAmount": 97737,
+          "supplierGstin": "07AABCV3456I1Z9",
+          "buyerGstin": "06BUYER006HR1Z5",
+          "hsn": "6823"
+        },
+        {
+          "invoiceNo": "INV0306",
+          "date": "2025-04-12",
+          "taxableValue": 54235,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 9762,
+          "gstAmount": 9762,
+          "supplierGstin": "07AABCV3456I1Z9",
+          "buyerGstin": "27BUYER002MH1Z3",
+          "hsn": "3809"
+        },
+        {
+          "invoiceNo": "INV0307",
+          "date": "2025-04-05",
+          "taxableValue": 95165,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 17130,
+          "gstAmount": 17130,
+          "supplierGstin": "07AABCV3456I1Z9",
+          "buyerGstin": "32BUYER008KL1Z1",
+          "hsn": "4814"
+        },
+        {
+          "invoiceNo": "INV0308",
+          "date": "2025-04-05",
+          "taxableValue": 169114,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 30441,
+          "gstAmount": 30441,
+          "supplierGstin": "07AABCV3456I1Z9",
+          "buyerGstin": "27BUYER002MH1Z3",
+          "hsn": "1290"
+        },
+        {
+          "invoiceNo": "INV0309",
+          "date": "2025-04-24",
+          "taxableValue": 343015,
+          "cgst": 30871,
+          "sgst": 30871,
+          "igst": 0,
+          "gstAmount": 61742,
+          "supplierGstin": "07AABCV3456I1Z9",
+          "buyerGstin": "07BUYER004DL1Z9",
+          "hsn": "7038"
+        }
+      ]
+    },
+    {
+      "supplier": {
+        "gstin": "24AABCW7890J1Z7",
+        "pan": "AABCW7890J",
+        "name": "Gujarat Textiles Pvt Ltd",
+        "state": "Gujarat"
+      },
+      "returns_info": {
+        "id": "R005",
+        "type": "GSTR1",
+        "period": "042025",
+        "status": "NOT_FILED",
+        "filingDate": null,
+        "gstin": "24AABCW7890J1Z7"
+      },
+      "invoices": [
+        {
+          "invoiceNo": "INV0401",
+          "date": "2025-04-04",
+          "taxableValue": 446084,
+          "cgst": 40148,
+          "sgst": 40148,
+          "igst": 0,
+          "gstAmount": 80296,
+          "supplierGstin": "24AABCW7890J1Z7",
+          "buyerGstin": "24BUYER005GJ1Z7",
+          "hsn": "3902"
+        },
+        {
+          "invoiceNo": "INV0402",
+          "date": "2025-04-05",
+          "taxableValue": 354072,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 63733,
+          "gstAmount": 63733,
+          "supplierGstin": "24AABCW7890J1Z7",
+          "buyerGstin": "29BUYER001KA1Z5",
+          "hsn": "1330"
+        },
+        {
+          "invoiceNo": "INV0403",
+          "date": "2025-04-02",
+          "taxableValue": 108465,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 19524,
+          "gstAmount": 19524,
+          "supplierGstin": "24AABCW7890J1Z7",
+          "buyerGstin": "32BUYER008KL1Z1",
+          "hsn": "3633"
+        },
+        {
+          "invoiceNo": "INV0404",
+          "date": "2025-04-16",
+          "taxableValue": 500553,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 90100,
+          "gstAmount": 90100,
+          "supplierGstin": "24AABCW7890J1Z7",
+          "buyerGstin": "29BUYER001KA1Z5",
+          "hsn": "2092"
+        },
+        {
+          "invoiceNo": "INV0405",
+          "date": "2025-04-08",
+          "taxableValue": 78114,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 14061,
+          "gstAmount": 14061,
+          "supplierGstin": "24AABCW7890J1Z7",
+          "buyerGstin": "29BUYER001KA1Z5",
+          "hsn": "7252"
+        },
+        {
+          "invoiceNo": "INV0406",
+          "date": "2025-04-02",
+          "taxableValue": 172298,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 31014,
+          "gstAmount": 31014,
+          "supplierGstin": "24AABCW7890J1Z7",
+          "buyerGstin": "06BUYER006HR1Z5",
+          "hsn": "7003"
+        },
+        {
+          "invoiceNo": "INV0407",
+          "date": "2025-04-10",
+          "taxableValue": 356201,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 64116,
+          "gstAmount": 64116,
+          "supplierGstin": "24AABCW7890J1Z7",
+          "buyerGstin": "09BUYER007UP1Z3",
+          "hsn": "2975"
+        },
+        {
+          "invoiceNo": "INV0408",
+          "date": "2025-04-24",
+          "taxableValue": 214384,
+          "cgst": 19295,
+          "sgst": 19295,
+          "igst": 0,
+          "gstAmount": 38590,
+          "supplierGstin": "24AABCW7890J1Z7",
+          "buyerGstin": "24BUYER005GJ1Z7",
+          "hsn": "9123"
+        }
+      ]
+    },
+    {
+      "supplier": {
+        "gstin": "06AABCX1234K1Z5",
+        "pan": "AABCX1234K",
+        "name": "Haryana Chemicals Ltd",
+        "state": "Haryana"
+      },
+      "returns_info": {
+        "id": "R006",
+        "type": "GSTR1",
+        "period": "042025",
+        "status": "NOT_FILED",
+        "filingDate": null,
+        "gstin": "06AABCX1234K1Z5"
+      },
+      "invoices": [
+        {
+          "invoiceNo": "INV0501",
+          "date": "2025-04-07",
+          "taxableValue": 348037,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 62647,
+          "gstAmount": 62647,
+          "supplierGstin": "06AABCX1234K1Z5",
+          "buyerGstin": "09BUYER007UP1Z3",
+          "hsn": "9463"
+        },
+        {
+          "invoiceNo": "INV0502",
+          "date": "2025-04-21",
+          "taxableValue": 171274,
+          "cgst": 15415,
+          "sgst": 15415,
+          "igst": 0,
+          "gstAmount": 30830,
+          "supplierGstin": "06AABCX1234K1Z5",
+          "buyerGstin": "06BUYER006HR1Z5",
+          "hsn": "6091"
+        },
+        {
+          "invoiceNo": "INV0503",
+          "date": "2025-04-03",
+          "taxableValue": 479432,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 86298,
+          "gstAmount": 86298,
+          "supplierGstin": "06AABCX1234K1Z5",
+          "buyerGstin": "07BUYER004DL1Z9",
+          "hsn": "1253"
+        },
+        {
+          "invoiceNo": "INV0504",
+          "date": "2025-04-10",
+          "taxableValue": 543023,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 97744,
+          "gstAmount": 97744,
+          "supplierGstin": "06AABCX1234K1Z5",
+          "buyerGstin": "27BUYER002MH1Z3",
+          "hsn": "3017"
+        },
+        {
+          "invoiceNo": "INV0505",
+          "date": "2025-04-02",
+          "taxableValue": 404065,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 72732,
+          "gstAmount": 72732,
+          "supplierGstin": "06AABCX1234K1Z5",
+          "buyerGstin": "27BUYER002MH1Z3",
+          "hsn": "9094"
+        },
+        {
+          "invoiceNo": "INV0506",
+          "date": "2025-04-02",
+          "taxableValue": 288724,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 51970,
+          "gstAmount": 51970,
+          "supplierGstin": "06AABCX1234K1Z5",
+          "buyerGstin": "09BUYER007UP1Z3",
+          "hsn": "2295"
+        },
+        {
+          "invoiceNo": "INV0507",
+          "date": "2025-04-05",
+          "taxableValue": 479422,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 86296,
+          "gstAmount": 86296,
+          "supplierGstin": "06AABCX1234K1Z5",
+          "buyerGstin": "29BUYER001KA1Z5",
+          "hsn": "6741"
+        },
+        {
+          "invoiceNo": "INV0508",
+          "date": "2025-04-25",
+          "taxableValue": 364846,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 65672,
+          "gstAmount": 65672,
+          "supplierGstin": "06AABCX1234K1Z5",
+          "buyerGstin": "09BUYER007UP1Z3",
+          "hsn": "3151"
+        }
+      ]
+    },
+    {
+      "supplier": {
+        "gstin": "09AABCY5678L1Z3",
+        "pan": "AABCY5678L",
+        "name": "UP Pharma Industries",
+        "state": "Uttar Pradesh"
+      },
+      "returns_info": {
+        "id": "R007",
+        "type": "GSTR1",
+        "period": "042025",
+        "status": "LATE",
+        "filingDate": "2025-05-14",
+        "gstin": "09AABCY5678L1Z3"
+      },
+      "invoices": [
+        {
+          "invoiceNo": "INV0601",
+          "date": "2025-04-14",
+          "taxableValue": 242943,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 43730,
+          "gstAmount": 43730,
+          "supplierGstin": "09AABCY5678L1Z3",
+          "buyerGstin": "27BUYER002MH1Z3",
+          "hsn": "5364"
+        },
+        {
+          "invoiceNo": "INV0602",
+          "date": "2025-04-14",
+          "taxableValue": 353393,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 63611,
+          "gstAmount": 63611,
+          "supplierGstin": "09AABCY5678L1Z3",
+          "buyerGstin": "32BUYER008KL1Z1",
+          "hsn": "6404"
+        },
+        {
+          "invoiceNo": "INV0603",
+          "date": "2025-04-11",
+          "taxableValue": 499276,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 89870,
+          "gstAmount": 89870,
+          "supplierGstin": "09AABCY5678L1Z3",
+          "buyerGstin": "06BUYER006HR1Z5",
+          "hsn": "3600"
+        }
+      ]
+    },
+    {
+      "supplier": {
+        "gstin": "32AABCZ9012M1Z1",
+        "pan": "AABCZ9012M",
+        "name": "Kerala Spice Traders",
+        "state": "Kerala"
+      },
+      "returns_info": {
+        "id": "R008",
+        "type": "GSTR1",
+        "period": "042025",
+        "status": "FILED",
+        "filingDate": "2025-05-18",
+        "gstin": "32AABCZ9012M1Z1"
+      },
+      "invoices": [
+        {
+          "invoiceNo": "INV0701",
+          "date": "2025-04-21",
+          "taxableValue": 146765,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 26418,
+          "gstAmount": 26418,
+          "supplierGstin": "32AABCZ9012M1Z1",
+          "buyerGstin": "27BUYER002MH1Z3",
+          "hsn": "4711"
+        },
+        {
+          "invoiceNo": "INV0702",
+          "date": "2025-04-18",
+          "taxableValue": 153326,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 27599,
+          "gstAmount": 27599,
+          "supplierGstin": "32AABCZ9012M1Z1",
+          "buyerGstin": "09BUYER007UP1Z3",
+          "hsn": "2158"
+        },
+        {
+          "invoiceNo": "INV0703",
+          "date": "2025-04-15",
+          "taxableValue": 357465,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 64344,
+          "gstAmount": 64344,
+          "supplierGstin": "32AABCZ9012M1Z1",
+          "buyerGstin": "07BUYER004DL1Z9",
+          "hsn": "5188"
+        },
+        {
+          "invoiceNo": "INV0704",
+          "date": "2025-04-25",
+          "taxableValue": 226011,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 40682,
+          "gstAmount": 40682,
+          "supplierGstin": "32AABCZ9012M1Z1",
+          "buyerGstin": "33BUYER003TN1Z1",
+          "hsn": "7709"
+        },
+        {
+          "invoiceNo": "INV0705",
+          "date": "2025-04-18",
+          "taxableValue": 280014,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 50403,
+          "gstAmount": 50403,
+          "supplierGstin": "32AABCZ9012M1Z1",
+          "buyerGstin": "29BUYER001KA1Z5",
+          "hsn": "2054"
+        },
+        {
+          "invoiceNo": "INV0706",
+          "date": "2025-04-02",
+          "taxableValue": 338929,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 61007,
+          "gstAmount": 61007,
+          "supplierGstin": "32AABCZ9012M1Z1",
+          "buyerGstin": "24BUYER005GJ1Z7",
+          "hsn": "9379"
+        },
+        {
+          "invoiceNo": "INV0707",
+          "date": "2025-04-15",
+          "taxableValue": 442329,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 79619,
+          "gstAmount": 79619,
+          "supplierGstin": "32AABCZ9012M1Z1",
+          "buyerGstin": "33BUYER003TN1Z1",
+          "hsn": "8012"
+        },
+        {
+          "invoiceNo": "INV0708",
+          "date": "2025-04-02",
+          "taxableValue": 116377,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 20948,
+          "gstAmount": 20948,
+          "supplierGstin": "32AABCZ9012M1Z1",
+          "buyerGstin": "24BUYER005GJ1Z7",
+          "hsn": "2015"
+        }
+      ]
+    },
+    {
+      "supplier": {
+        "gstin": "36AADCA3456N1Z9",
+        "pan": "AADCA3456N",
+        "name": "Telangana IT Services",
+        "state": "Telangana"
+      },
+      "returns_info": {
+        "id": "R009",
+        "type": "GSTR1",
+        "period": "042025",
+        "status": "NOT_FILED",
+        "filingDate": null,
+        "gstin": "36AADCA3456N1Z9"
+      },
+      "invoices": [
+        {
+          "invoiceNo": "INV0801",
+          "date": "2025-04-06",
+          "taxableValue": 312915,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 56325,
+          "gstAmount": 56325,
+          "supplierGstin": "36AADCA3456N1Z9",
+          "buyerGstin": "09BUYER007UP1Z3",
+          "hsn": "9410"
+        },
+        {
+          "invoiceNo": "INV0802",
+          "date": "2025-04-14",
+          "taxableValue": 467389,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 84130,
+          "gstAmount": 84130,
+          "supplierGstin": "36AADCA3456N1Z9",
+          "buyerGstin": "07BUYER004DL1Z9",
+          "hsn": "8965"
+        },
+        {
+          "invoiceNo": "INV0803",
+          "date": "2025-04-02",
+          "taxableValue": 377148,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 67887,
+          "gstAmount": 67887,
+          "supplierGstin": "36AADCA3456N1Z9",
+          "buyerGstin": "33BUYER003TN1Z1",
+          "hsn": "8350"
+        }
+      ]
+    },
+    {
+      "supplier": {
+        "gstin": "19AADCB7890O1Z7",
+        "pan": "AADCB7890O",
+        "name": "Bengal Manufacturing Co",
+        "state": "West Bengal"
+      },
+      "returns_info": {
+        "id": "R010",
+        "type": "GSTR1",
+        "period": "042025",
+        "status": "NOT_FILED",
+        "filingDate": null,
+        "gstin": "19AADCB7890O1Z7"
+      },
+      "invoices": [
+        {
+          "invoiceNo": "INV0901",
+          "date": "2025-04-26",
+          "taxableValue": 462715,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 83289,
+          "gstAmount": 83289,
+          "supplierGstin": "19AADCB7890O1Z7",
+          "buyerGstin": "32BUYER008KL1Z1",
+          "hsn": "4445"
+        },
+        {
+          "invoiceNo": "INV0902",
+          "date": "2025-04-21",
+          "taxableValue": 369143,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 66446,
+          "gstAmount": 66446,
+          "supplierGstin": "19AADCB7890O1Z7",
+          "buyerGstin": "33BUYER003TN1Z1",
+          "hsn": "9837"
+        },
+        {
+          "invoiceNo": "INV0903",
+          "date": "2025-04-16",
+          "taxableValue": 521854,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 93934,
+          "gstAmount": 93934,
+          "supplierGstin": "19AADCB7890O1Z7",
+          "buyerGstin": "06BUYER006HR1Z5",
+          "hsn": "4507"
+        },
+        {
+          "invoiceNo": "INV0904",
+          "date": "2025-04-25",
+          "taxableValue": 352776,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 63500,
+          "gstAmount": 63500,
+          "supplierGstin": "19AADCB7890O1Z7",
+          "buyerGstin": "06BUYER006HR1Z5",
+          "hsn": "4169"
+        }
+      ]
+    },
+    {
+      "supplier": {
+        "gstin": "08AADCC1234P1Z5",
+        "pan": "AADCC1234P",
+        "name": "Rajasthan Minerals Ltd",
+        "state": "Rajasthan"
+      },
+      "returns_info": {
+        "id": "R011",
+        "type": "GSTR1",
+        "period": "042025",
+        "status": "FILED",
+        "filingDate": "2025-05-09",
+        "gstin": "08AADCC1234P1Z5"
+      },
+      "invoices": [
+        {
+          "invoiceNo": "INV1001",
+          "date": "2025-04-15",
+          "taxableValue": 190122,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 34222,
+          "gstAmount": 34222,
+          "supplierGstin": "08AADCC1234P1Z5",
+          "buyerGstin": "07BUYER004DL1Z9",
+          "hsn": "1882"
+        },
+        {
+          "invoiceNo": "INV1002",
+          "date": "2025-04-20",
+          "taxableValue": 155095,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 27917,
+          "gstAmount": 27917,
+          "supplierGstin": "08AADCC1234P1Z5",
+          "buyerGstin": "07BUYER004DL1Z9",
+          "hsn": "8202"
+        },
+        {
+          "invoiceNo": "INV1003",
+          "date": "2025-04-16",
+          "taxableValue": 69614,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 12531,
+          "gstAmount": 12531,
+          "supplierGstin": "08AADCC1234P1Z5",
+          "buyerGstin": "32BUYER008KL1Z1",
+          "hsn": "1563"
+        },
+        {
+          "invoiceNo": "INV1004",
+          "date": "2025-04-05",
+          "taxableValue": 64224,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 11560,
+          "gstAmount": 11560,
+          "supplierGstin": "08AADCC1234P1Z5",
+          "buyerGstin": "27BUYER002MH1Z3",
+          "hsn": "8786"
+        },
+        {
+          "invoiceNo": "INV1005",
+          "date": "2025-04-23",
+          "taxableValue": 263973,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 47515,
+          "gstAmount": 47515,
+          "supplierGstin": "08AADCC1234P1Z5",
+          "buyerGstin": "33BUYER003TN1Z1",
+          "hsn": "8249"
+        },
+        {
+          "invoiceNo": "INV1006",
+          "date": "2025-04-16",
+          "taxableValue": 247252,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 44505,
+          "gstAmount": 44505,
+          "supplierGstin": "08AADCC1234P1Z5",
+          "buyerGstin": "07BUYER004DL1Z9",
+          "hsn": "6646"
+        },
+        {
+          "invoiceNo": "INV1007",
+          "date": "2025-04-15",
+          "taxableValue": 402495,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 72449,
+          "gstAmount": 72449,
+          "supplierGstin": "08AADCC1234P1Z5",
+          "buyerGstin": "32BUYER008KL1Z1",
+          "hsn": "7596"
+        },
+        {
+          "invoiceNo": "INV1008",
+          "date": "2025-04-01",
+          "taxableValue": 506652,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 91197,
+          "gstAmount": 91197,
+          "supplierGstin": "08AADCC1234P1Z5",
+          "buyerGstin": "32BUYER008KL1Z1",
+          "hsn": "5032"
+        },
+        {
+          "invoiceNo": "INV1009",
+          "date": "2025-04-19",
+          "taxableValue": 406043,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 73088,
+          "gstAmount": 73088,
+          "supplierGstin": "08AADCC1234P1Z5",
+          "buyerGstin": "32BUYER008KL1Z1",
+          "hsn": "6953"
+        }
+      ]
+    },
+    {
+      "supplier": {
+        "gstin": "10AADCD5678Q1Z3",
+        "pan": "AADCD5678Q",
+        "name": "Himachal Hydro Power",
+        "state": "Himachal Pradesh"
+      },
+      "returns_info": {
+        "id": "R012",
+        "type": "GSTR1",
+        "period": "042025",
+        "status": "FILED",
+        "filingDate": "2025-05-09",
+        "gstin": "10AADCD5678Q1Z3"
+      },
+      "invoices": [
+        {
+          "invoiceNo": "INV1101",
+          "date": "2025-04-02",
+          "taxableValue": 373017,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 67143,
+          "gstAmount": 67143,
+          "supplierGstin": "10AADCD5678Q1Z3",
+          "buyerGstin": "09BUYER007UP1Z3",
+          "hsn": "1215"
+        },
+        {
+          "invoiceNo": "INV1102",
+          "date": "2025-04-23",
+          "taxableValue": 462311,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 83216,
+          "gstAmount": 83216,
+          "supplierGstin": "10AADCD5678Q1Z3",
+          "buyerGstin": "33BUYER003TN1Z1",
+          "hsn": "5022"
+        },
+        {
+          "invoiceNo": "INV1103",
+          "date": "2025-04-27",
+          "taxableValue": 543159,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 97769,
+          "gstAmount": 97769,
+          "supplierGstin": "10AADCD5678Q1Z3",
+          "buyerGstin": "33BUYER003TN1Z1",
+          "hsn": "5644"
+        },
+        {
+          "invoiceNo": "INV1104",
+          "date": "2025-04-03",
+          "taxableValue": 431662,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 77699,
+          "gstAmount": 77699,
+          "supplierGstin": "10AADCD5678Q1Z3",
+          "buyerGstin": "06BUYER006HR1Z5",
+          "hsn": "8432"
+        },
+        {
+          "invoiceNo": "INV1105",
+          "date": "2025-04-02",
+          "taxableValue": 409969,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 73794,
+          "gstAmount": 73794,
+          "supplierGstin": "10AADCD5678Q1Z3",
+          "buyerGstin": "33BUYER003TN1Z1",
+          "hsn": "5324"
+        },
+        {
+          "invoiceNo": "INV1106",
+          "date": "2025-04-22",
+          "taxableValue": 452252,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 81405,
+          "gstAmount": 81405,
+          "supplierGstin": "10AADCD5678Q1Z3",
+          "buyerGstin": "07BUYER004DL1Z9",
+          "hsn": "4047"
+        },
+        {
+          "invoiceNo": "INV1107",
+          "date": "2025-04-15",
+          "taxableValue": 246469,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 44364,
+          "gstAmount": 44364,
+          "supplierGstin": "10AADCD5678Q1Z3",
+          "buyerGstin": "09BUYER007UP1Z3",
+          "hsn": "3098"
+        }
+      ]
+    },
+    {
+      "supplier": {
+        "gstin": "12AADCE9012R1Z1",
+        "pan": "AADCE9012R",
+        "name": "Punjab Agro Exports",
+        "state": "Punjab"
+      },
+      "returns_info": {
+        "id": "R013",
+        "type": "GSTR1",
+        "period": "042025",
+        "status": "LATE",
+        "filingDate": "2025-05-21",
+        "gstin": "12AADCE9012R1Z1"
+      },
+      "invoices": [
+        {
+          "invoiceNo": "INV1201",
+          "date": "2025-04-25",
+          "taxableValue": 549923,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 98986,
+          "gstAmount": 98986,
+          "supplierGstin": "12AADCE9012R1Z1",
+          "buyerGstin": "27BUYER002MH1Z3",
+          "hsn": "4175"
+        },
+        {
+          "invoiceNo": "INV1202",
+          "date": "2025-04-25",
+          "taxableValue": 535206,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 96337,
+          "gstAmount": 96337,
+          "supplierGstin": "12AADCE9012R1Z1",
+          "buyerGstin": "27BUYER002MH1Z3",
+          "hsn": "9877"
+        },
+        {
+          "invoiceNo": "INV1203",
+          "date": "2025-04-16",
+          "taxableValue": 528433,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 95118,
+          "gstAmount": 95118,
+          "supplierGstin": "12AADCE9012R1Z1",
+          "buyerGstin": "32BUYER008KL1Z1",
+          "hsn": "1239"
+        },
+        {
+          "invoiceNo": "INV1204",
+          "date": "2025-04-02",
+          "taxableValue": 136395,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 24551,
+          "gstAmount": 24551,
+          "supplierGstin": "12AADCE9012R1Z1",
+          "buyerGstin": "06BUYER006HR1Z5",
+          "hsn": "9616"
+        },
+        {
+          "invoiceNo": "INV1205",
+          "date": "2025-04-27",
+          "taxableValue": 310641,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 55915,
+          "gstAmount": 55915,
+          "supplierGstin": "12AADCE9012R1Z1",
+          "buyerGstin": "29BUYER001KA1Z5",
+          "hsn": "5377"
+        },
+        {
+          "invoiceNo": "INV1206",
+          "date": "2025-04-08",
+          "taxableValue": 209577,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 37724,
+          "gstAmount": 37724,
+          "supplierGstin": "12AADCE9012R1Z1",
+          "buyerGstin": "27BUYER002MH1Z3",
+          "hsn": "2597"
+        },
+        {
+          "invoiceNo": "INV1207",
+          "date": "2025-04-05",
+          "taxableValue": 467144,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 84086,
+          "gstAmount": 84086,
+          "supplierGstin": "12AADCE9012R1Z1",
+          "buyerGstin": "32BUYER008KL1Z1",
+          "hsn": "6589"
+        },
+        {
+          "invoiceNo": "INV1208",
+          "date": "2025-04-24",
+          "taxableValue": 510549,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 91899,
+          "gstAmount": 91899,
+          "supplierGstin": "12AADCE9012R1Z1",
+          "buyerGstin": "33BUYER003TN1Z1",
+          "hsn": "1404"
+        }
+      ]
+    },
+    {
+      "supplier": {
+        "gstin": "14AADCF3456S1Z9",
+        "pan": "AADCF3456S",
+        "name": "Haryana Dairy Products",
+        "state": "Haryana"
+      },
+      "returns_info": {
+        "id": "R014",
+        "type": "GSTR1",
+        "period": "042025",
+        "status": "LATE",
+        "filingDate": "2025-05-14",
+        "gstin": "14AADCF3456S1Z9"
+      },
+      "invoices": [
+        {
+          "invoiceNo": "INV1301",
+          "date": "2025-04-28",
+          "taxableValue": 219334,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 39480,
+          "gstAmount": 39480,
+          "supplierGstin": "14AADCF3456S1Z9",
+          "buyerGstin": "09BUYER007UP1Z3",
+          "hsn": "2768"
+        },
+        {
+          "invoiceNo": "INV1302",
+          "date": "2025-04-10",
+          "taxableValue": 161745,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 29114,
+          "gstAmount": 29114,
+          "supplierGstin": "14AADCF3456S1Z9",
+          "buyerGstin": "07BUYER004DL1Z9",
+          "hsn": "2140"
+        },
+        {
+          "invoiceNo": "INV1303",
+          "date": "2025-04-15",
+          "taxableValue": 99434,
+          "cgst": 8949,
+          "sgst": 8949,
+          "igst": 0,
+          "gstAmount": 17898,
+          "supplierGstin": "14AADCF3456S1Z9",
+          "buyerGstin": "06BUYER006HR1Z5",
+          "hsn": "5329"
+        }
+      ]
+    },
+    {
+      "supplier": {
+        "gstin": "16AADCG7890T1Z7",
+        "pan": "AADCG7890T",
+        "name": "Goa Tourism Services",
+        "state": "Goa"
+      },
+      "returns_info": {
+        "id": "R015",
+        "type": "GSTR1",
+        "period": "042025",
+        "status": "FILED",
+        "filingDate": "2025-05-23",
+        "gstin": "16AADCG7890T1Z7"
+      },
+      "invoices": [
+        {
+          "invoiceNo": "INV1401",
+          "date": "2025-04-28",
+          "taxableValue": 256332,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 46140,
+          "gstAmount": 46140,
+          "supplierGstin": "16AADCG7890T1Z7",
+          "buyerGstin": "24BUYER005GJ1Z7",
+          "hsn": "8719"
+        },
+        {
+          "invoiceNo": "INV1402",
+          "date": "2025-04-10",
+          "taxableValue": 76539,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 13777,
+          "gstAmount": 13777,
+          "supplierGstin": "16AADCG7890T1Z7",
+          "buyerGstin": "32BUYER008KL1Z1",
+          "hsn": "2030"
+        },
+        {
+          "invoiceNo": "INV1403",
+          "date": "2025-04-18",
+          "taxableValue": 534956,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 96292,
+          "gstAmount": 96292,
+          "supplierGstin": "16AADCG7890T1Z7",
+          "buyerGstin": "32BUYER008KL1Z1",
+          "hsn": "4701"
+        },
+        {
+          "invoiceNo": "INV1404",
+          "date": "2025-04-03",
+          "taxableValue": 373342,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 67202,
+          "gstAmount": 67202,
+          "supplierGstin": "16AADCG7890T1Z7",
+          "buyerGstin": "09BUYER007UP1Z3",
+          "hsn": "2093"
+        },
+        {
+          "invoiceNo": "INV1405",
+          "date": "2025-04-17",
+          "taxableValue": 432745,
+          "cgst": 0,
+          "sgst": 0,
+          "igst": 77894,
+          "gstAmount": 77894,
+          "supplierGstin": "16AADCG7890T1Z7",
+          "buyerGstin": "27BUYER002MH1Z3",
+          "hsn": "5212"
+        }
+      ]
+    }
+  ],
+  "einvoice_data": [],
+  "purchase_register_data": [],
+  "gstr2b_data": []
+}

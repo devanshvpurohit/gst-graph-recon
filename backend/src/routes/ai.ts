@@ -2,8 +2,8 @@ import { Router } from 'express';
 import axios from 'axios';
 
 const router = Router();
-const OLLAMA_URL = process.env.OLLAMA_URL || 'http://host.docker.internal:11434';
-const DEFAULT_MODEL = process.env.OLLAMA_MODEL || 'llama3';
+const OLLAMA_URL = process.env.OLLAMA_URL || 'http://localhost:11434';
+const MODEL = process.env.OLLAMA_MODEL || 'gemma:3b';
 
 router.post('/analyze/vendor', async (req, res) => {
     try {
@@ -40,9 +40,10 @@ Provide your analysis in 3 short paragraphs:
 `;
 
         const response = await axios.post(`${OLLAMA_URL}/api/generate`, {
-            model: DEFAULT_MODEL,
+            model: MODEL,
             prompt: prompt,
-            stream: false
+            stream: false,
+            temperature: 0.3
         });
 
         res.json({ analysis: response.data.response });
@@ -86,9 +87,10 @@ Keep it strictly factual and professional.
 `;
 
         const response = await axios.post(`${OLLAMA_URL}/api/generate`, {
-            model: DEFAULT_MODEL,
+            model: MODEL,
             prompt: prompt,
-            stream: false
+            stream: false,
+            temperature: 0.3
         });
 
         res.json({ analysis: response.data.response });

@@ -22,7 +22,7 @@ router.get('/summary', async (req, res) => {
 
         const q4 = await session.run(`
       MATCH (i:Invoice)
-      WHERE NOT (i)-[:HAS_IRN]->(:IRN {status: 'ACTIVE'}) OR NOT SIZE((:Return)-[:DECLARES]->(i)) > 0
+      WHERE NOT (i)-[:HAS_IRN]->(:IRN {status: 'ACTIVE'}) OR NOT EXISTS((:Return)-[:DECLARES]->(i))
       RETURN sum(i.taxableValue * 0.18) AS mismatchItc
     `);
         const totalMismatches = q4.records[0]?.get('mismatchItc') || 0;

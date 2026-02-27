@@ -5,6 +5,7 @@ import {
 } from 'recharts';
 import RiskCard from '../components/RiskCard';
 import GraphView from '../components/GraphView';
+import AIInsights from '../components/AIInsights';
 import { DashboardSummary, fetchDashboardSummary, fetchNetworkRisk, NetworkRisk } from '../api/client';
 
 const COLORS = ['#10b981', '#f59e0b', '#ef4444'];
@@ -117,6 +118,9 @@ export default function Dashboard() {
                 <h1 className="text-3xl font-bold text-white">Dashboard</h1>
                 <p className="text-sm text-slate-400 mt-1">ITC Reconciliation & Risk Overview (Live Data)</p>
             </div>
+
+            {/* AI Insights Section */}
+            <AIInsights />
 
             {/* KPI Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">

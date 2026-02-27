@@ -21,6 +21,7 @@ interface RiskAnalysis {
     reasoning: string[];
     successFactors: string[];
     recommendations: string[];
+    aiAnalysis?: string;
 }
 
 export default function DataEditor() {
@@ -107,10 +108,22 @@ export default function DataEditor() {
         setLoading(true);
         try {
             const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
-            const response = await axios.post(`${apiUrl}/api/analyze/risk`, {
+            
+            // First get ML analysis
+            const mlResponse = await axios.post(`${apiUrl}/api/analyze/risk`, {
                 invoices,
             });
-            setRiskAnalysis(response.data);
+
+            // Then get AI analysis from Gemma
+            const aiResponse = await axios.post(`${apiUrl}/api/ai/analyze`, {
+                type: 'risk',
+                data: { invoices },
+            });
+
+            setRiskAnalysis({
+                ...mlResponse.data,
+                aiAnalysis: aiResponse.data.analysis,
+            });
         } catch (error) {
             console.error('Failed to analyze risk:', error);
         } finally {
@@ -313,6 +326,14 @@ export default function DataEditor() {
                 <div className="bg-surface-900/50 border border-white/10 rounded-lg p-6 space-y-6">
                     <div>
                         <h2 className="text-2xl font-bold text-white mb-4">Risk Analysis Results</h2>
+
+                        {/* AI Analysis from Gemma */}
+                        {riskAnalysis.aiAnalysis && (
+                            <div className="mb-6 p-4 bg-purple-500/10 border border-purple-500/30 rounded-lg">
+                                <h3 className="text-lg font-semibold text-purple-300 mb-2">🤖 AI Analysis (Gemma 3:1B)</h3>
+                                <p className="text-slate-300 text-sm leading-relaxed">{riskAnalysis.aiAnalysis}</p>
+                            </div>
+                        )}
 
                         {/* Risk Score */}
                         <div className="mb-6">

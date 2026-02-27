@@ -6,6 +6,7 @@ import { loadGSTR1 } from '../ingestion/gstr1_loader';
 import { loadGSTR2B } from '../ingestion/gstr2b_loader';
 import { loadEInvoice } from '../ingestion/einvoice_loader';
 import { loadPurchaseRegister } from '../ingestion/purchase_register_loader';
+import { analyzePDF } from '../services/pdf-analyzer';
 
 const router = Router();
 
@@ -27,15 +28,15 @@ const storage = multer.diskStorage({
 
 const upload = multer({
     storage: storage,
-    fileFilter: (req, file, cb) => {
-        const allowedMimes = ['application/json', 'text/csv', 'text/plain', 'application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'];
-        const allowedExts = ['.json', '.csv', '.xlsx', '.xls'];
+    fileFilter: (_req, file, cb) => {
+        const allowedMimes = ['application/json', 'text/csv', 'text/plain', 'application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/pdf'];
+        const allowedExts = ['.json', '.csv', '.xlsx', '.xls', '.pdf'];
         const ext = path.extname(file.originalname).toLowerCase();
         
         if (allowedMimes.includes(file.mimetype) || allowedExts.includes(ext)) {
             cb(null, true);
         } else {
-            cb(new Error('Invalid file type. Only JSON, CSV, and Excel files are allowed.'));
+            cb(new Error('Invalid file type. Only JSON, CSV, Excel, and PDF files are allowed.'));
         }
     }
 });
@@ -150,6 +151,40 @@ router.post('/upload/purchase-register', upload.single('file'), async (req, res)
         
         fs.unlinkSync(req.file.path);
         res.json({ ...result, fileName: req.file.originalname });
+    } catch (error: any) {
+        if (req.file) fs.unlinkSync(req.file.path);
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// PDF upload endpoint with AI analysis
+router.post('/upload/pdf', upload.single('file'), async (req, res) => {
+    try {
+        if (!req.file) {
+            return res.status(400).json({ error: 'No file uploaded' });
+        }
+
+        // Read PDF file
+        const pdfBuffer = fs.readFileSync(req.file.path);
+
+        // Analyze PDF with AI
+        const analysisResult = await analyzePDF(pdfBuffer);
+
+        // Clean up uploaded file
+        fs.unlinkSync(req.file.path);
+
+        if (!analysisResult.success) {
+            return res.status(500).json({
+                error: analysisResult.error,
+                hint: 'Ensure Ollama is running with Gemma model',
+            });
+        }
+
+        res.json({
+            fileName: req.file.originalname,
+            fileSize: req.file.size,
+            ...analysisResult,
+        });
     } catch (error: any) {
         if (req.file) fs.unlinkSync(req.file.path);
         res.status(500).json({ error: error.message });
